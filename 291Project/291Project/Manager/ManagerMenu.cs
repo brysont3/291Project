@@ -36,5 +36,29 @@ namespace _291Project
             EmployeeEditPage employeeEditPage = new EmployeeEditPage();
             employeeEditPage.Show();
         }
+
+        private void SalesReportButton_Click(object sender, EventArgs e)
+        {
+            SalesReport salesReport = new SalesReport();
+            salesReport.Show();
+        }
+
+        private void MovieRentalButton_Click(object sender, EventArgs e)
+        {
+            MovieRentals movieRentals = new MovieRentals();
+            movieRentals.Show();
+        }
+
+        private void MostActiveCustomersButton_Click(object sender, EventArgs e)
+        {
+            MostActiveCustomers mostActiveCustomers = new MostActiveCustomers();
+            mostActiveCustomers.Show();
+        }
+
+        private void MostActiveEmployeesButton_Click(object sender, EventArgs e)
+        {
+            MostActiveEmployees mostActiveEmployees = new MostActiveEmployees();
+            mostActiveEmployees.Show();
+        }
     }
 }

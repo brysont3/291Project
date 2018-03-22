@@ -31,6 +31,10 @@
             this.LogoutButton = new System.Windows.Forms.Button();
             this.MovieButton = new System.Windows.Forms.Button();
             this.EmployeeButton = new System.Windows.Forms.Button();
+            this.SalesReportButton = new System.Windows.Forms.Button();
+            this.MovieRentalButton = new System.Windows.Forms.Button();
+            this.MostActiveCustomersButton = new System.Windows.Forms.Button();
+            this.MostActiveEmployeesButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // LogoutButton
@@ -55,19 +59,63 @@
             // 
             // EmployeeButton
             // 
-            this.EmployeeButton.Location = new System.Drawing.Point(51, 151);
+            this.EmployeeButton.Location = new System.Drawing.Point(51, 147);
             this.EmployeeButton.Name = "EmployeeButton";
-            this.EmployeeButton.Size = new System.Drawing.Size(124, 55);
+            this.EmployeeButton.Size = new System.Drawing.Size(124, 59);
             this.EmployeeButton.TabIndex = 2;
             this.EmployeeButton.Text = "Employees";
             this.EmployeeButton.UseVisualStyleBackColor = true;
             this.EmployeeButton.Click += new System.EventHandler(this.EmployeeButton_Click);
+            // 
+            // SalesReportButton
+            // 
+            this.SalesReportButton.Location = new System.Drawing.Point(51, 232);
+            this.SalesReportButton.Name = "SalesReportButton";
+            this.SalesReportButton.Size = new System.Drawing.Size(124, 60);
+            this.SalesReportButton.TabIndex = 3;
+            this.SalesReportButton.Text = "Sales Report";
+            this.SalesReportButton.UseVisualStyleBackColor = true;
+            this.SalesReportButton.Click += new System.EventHandler(this.SalesReportButton_Click);
+            // 
+            // MovieRentalButton
+            // 
+            this.MovieRentalButton.Location = new System.Drawing.Point(51, 317);
+            this.MovieRentalButton.Name = "MovieRentalButton";
+            this.MovieRentalButton.Size = new System.Drawing.Size(124, 57);
+            this.MovieRentalButton.TabIndex = 4;
+            this.MovieRentalButton.Text = "Movie Rentals";
+            this.MovieRentalButton.UseVisualStyleBackColor = true;
+            this.MovieRentalButton.Click += new System.EventHandler(this.MovieRentalButton_Click);
+            // 
+            // MostActiveCustomersButton
+            // 
+            this.MostActiveCustomersButton.Location = new System.Drawing.Point(283, 59);
+            this.MostActiveCustomersButton.Name = "MostActiveCustomersButton";
+            this.MostActiveCustomersButton.Size = new System.Drawing.Size(120, 55);
+            this.MostActiveCustomersButton.TabIndex = 5;
+            this.MostActiveCustomersButton.Text = "Most Active Customers";
+            this.MostActiveCustomersButton.UseVisualStyleBackColor = true;
+            this.MostActiveCustomersButton.Click += new System.EventHandler(this.MostActiveCustomersButton_Click);
+            // 
+            // MostActiveEmployeesButton
+            // 
+            this.MostActiveEmployeesButton.Location = new System.Drawing.Point(283, 147);
+            this.MostActiveEmployeesButton.Name = "MostActiveEmployeesButton";
+            this.MostActiveEmployeesButton.Size = new System.Drawing.Size(120, 59);
+            this.MostActiveEmployeesButton.TabIndex = 6;
+            this.MostActiveEmployeesButton.Text = "Most Active Employees";
+            this.MostActiveEmployeesButton.UseVisualStyleBackColor = true;
+            this.MostActiveEmployeesButton.Click += new System.EventHandler(this.MostActiveEmployeesButton_Click);
             // 
             // ManagerMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(588, 535);
+            this.Controls.Add(this.MostActiveEmployeesButton);
+            this.Controls.Add(this.MostActiveCustomersButton);
+            this.Controls.Add(this.MovieRentalButton);
+            this.Controls.Add(this.SalesReportButton);
             this.Controls.Add(this.EmployeeButton);
             this.Controls.Add(this.MovieButton);
             this.Controls.Add(this.LogoutButton);
@@ -82,5 +130,9 @@
         private System.Windows.Forms.Button LogoutButton;
         private System.Windows.Forms.Button MovieButton;
         private System.Windows.Forms.Button EmployeeButton;
+        private System.Windows.Forms.Button SalesReportButton;
+        private System.Windows.Forms.Button MovieRentalButton;
+        private System.Windows.Forms.Button MostActiveCustomersButton;
+        private System.Windows.Forms.Button MostActiveEmployeesButton;
     }
 }
