@@ -36,10 +36,6 @@
             this.employeeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.employeeTableAdapter = new _291Project.dataSet1TableAdapters.EmployeeTableAdapter();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.fKOrderEmployeeBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.orderTableAdapter = new _291Project.dataSet1TableAdapters.OrderTableAdapter();
-            this.employeeBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.employeeBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.sSNDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.firstNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lastNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -52,18 +48,20 @@
             this.startDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.hourlyRateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.typeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.employeeBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.fKOrderEmployeeBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.orderTableAdapter = new _291Project.dataSet1TableAdapters.OrderTableAdapter();
+            this.employeeBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.UpdateButton = new System.Windows.Forms.Button();
             this.DeleteButton = new System.Windows.Forms.Button();
-            this.SearchTextbox = new System.Windows.Forms.TextBox();
-            this.SearchButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.movieBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fKOrderEmployeeBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource2)).BeginInit();
             this.SuspendLayout();
             // 
             // dataSet1
@@ -117,25 +115,6 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(1235, 561);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // fKOrderEmployeeBindingSource
-            // 
-            this.fKOrderEmployeeBindingSource.DataMember = "FK_Order_Employee";
-            this.fKOrderEmployeeBindingSource.DataSource = this.employeeBindingSource;
-            // 
-            // orderTableAdapter
-            // 
-            this.orderTableAdapter.ClearBeforeFill = true;
-            // 
-            // employeeBindingSource1
-            // 
-            this.employeeBindingSource1.DataMember = "Employee";
-            this.employeeBindingSource1.DataSource = this.dataSet1;
-            // 
-            // employeeBindingSource2
-            // 
-            this.employeeBindingSource2.DataMember = "Employee";
-            this.employeeBindingSource2.DataSource = this.dataSet1BindingSource;
             // 
             // sSNDataGridViewTextBoxColumn
             // 
@@ -209,6 +188,25 @@
             this.typeDataGridViewTextBoxColumn.HeaderText = "Type";
             this.typeDataGridViewTextBoxColumn.Name = "typeDataGridViewTextBoxColumn";
             // 
+            // employeeBindingSource2
+            // 
+            this.employeeBindingSource2.DataMember = "Employee";
+            this.employeeBindingSource2.DataSource = this.dataSet1BindingSource;
+            // 
+            // fKOrderEmployeeBindingSource
+            // 
+            this.fKOrderEmployeeBindingSource.DataMember = "FK_Order_Employee";
+            this.fKOrderEmployeeBindingSource.DataSource = this.employeeBindingSource;
+            // 
+            // orderTableAdapter
+            // 
+            this.orderTableAdapter.ClearBeforeFill = true;
+            // 
+            // employeeBindingSource1
+            // 
+            this.employeeBindingSource1.DataMember = "Employee";
+            this.employeeBindingSource1.DataSource = this.dataSet1;
+            // 
             // UpdateButton
             // 
             this.UpdateButton.Location = new System.Drawing.Point(1080, 563);
@@ -228,15 +226,12 @@
             this.DeleteButton.Text = "Delete Selected Row";
             this.DeleteButton.UseVisualStyleBackColor = true;
             this.DeleteButton.Click += new System.EventHandler(this.DeleteButton_Click);
-
             // 
             // EmployeeEditPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1236, 640);
-            this.Controls.Add(this.SearchButton);
-            this.Controls.Add(this.SearchTextbox);
             this.Controls.Add(this.DeleteButton);
             this.Controls.Add(this.UpdateButton);
             this.Controls.Add(this.dataGridView1);
@@ -248,11 +243,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.movieBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fKOrderEmployeeBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource2)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -282,7 +276,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn typeDataGridViewTextBoxColumn;
         private System.Windows.Forms.Button UpdateButton;
         private System.Windows.Forms.Button DeleteButton;
-        private System.Windows.Forms.TextBox SearchTextbox;
-        private System.Windows.Forms.Button SearchButton;
     }
 }
