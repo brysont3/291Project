@@ -18,5 +18,21 @@ namespace _291Project
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Login());
         }
+
+        static int CustID;
+
+        static public int CurrentCumsterID
+        {
+            get { return CustID; }
+            set { CustID = value; }
+        }
+
+        static int EmpID;
+
+        static public int CurrentEmployeeID
+        {
+            get { return EmpID; }
+            set { EmpID = value; }
+        }
     }
 }
