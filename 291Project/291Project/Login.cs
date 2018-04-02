@@ -27,13 +27,18 @@ namespace _291Project
                 ConnectionString = str
             };
             con.Open();
-            SqlCommand cmd = new SqlCommand("Select Email, Password from Customer where Email = @Email and Password = @Password", con);
+            SqlCommand cmd = new SqlCommand("Select CID, Email, Password from Customer where Email = @Email and Password = @Password", con);
             cmd.Parameters.AddWithValue("@Email", CustomerEmailTextbox.Text);
             cmd.Parameters.AddWithValue("@Password", CustomerPasswordTextbox.Text);
             SqlDataReader dr = cmd.ExecuteReader();
             if (dr.HasRows)
             {
-                CustomerLoginFailedLabel.Text = "Login Successful!";
+
+                dr.Read();
+                Program.CurrentCumsterID = dr.GetInt32(0);
+                Employee.CustomerMenu customerMenu = new Employee.CustomerMenu();
+                customerMenu.Show();
+                this.Hide();
             }
             else
             {
@@ -53,12 +58,14 @@ namespace _291Project
                 ConnectionString = str
             };
             con.Open();
-            SqlCommand cmd = new SqlCommand("Select Email, Password, Type from Employee where Email = @Email and Password = @Password", con);
+            SqlCommand cmd = new SqlCommand("Select EID, Email, Password, Type from Employee where Email = @Email and Password = @Password", con);
             cmd.Parameters.AddWithValue("@Email", EmployeeEmailTextbox.Text);
             cmd.Parameters.AddWithValue("@Password", EmployeePasswordTextbox.Text);
             SqlDataReader dr = cmd.ExecuteReader();
             if(dr.HasRows)
             {
+                dr.Read();
+                Program.CurrentEmployeeID = dr.GetInt32(0);
                 //Checks if the employee is a manager
                 if (dr.Read() && dr["Type"].ToString() == "Manager")
                 {
