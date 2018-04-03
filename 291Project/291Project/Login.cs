@@ -35,10 +35,8 @@ namespace _291Project
             {
 
                 dr.Read();
-                Program.CurrentCumsterID = dr.GetInt32(0);
-                Employee.CustomerMenu customerMenu = new Employee.CustomerMenu();
-                customerMenu.Show();
-                this.Hide();
+                Program.CustomerID = dr.GetInt32(0);
+                this.Close();
             }
             else
             {
@@ -65,22 +63,9 @@ namespace _291Project
             if(dr.HasRows)
             {
                 dr.Read();
-                Program.CurrentEmployeeID = dr.GetInt32(0);
-                //Checks if the employee is a manager
-                if (dr.Read() && dr["Type"].ToString() == "Manager")
-                {
-                    ManagerMenu managerMenu = new ManagerMenu();
-                    managerMenu.Show();
-                    this.Hide();
-                }
-                //If not a manager, loads the regular employee menu
-                else
-                {
-
-                    EmployeeMenu employeeMenu = new EmployeeMenu();
-                    employeeMenu.Show();
-                    this.Hide();
-                }
+                Program.EmployeeID = dr.GetInt32(0);
+                Program.EmployeeType = dr["Type"].ToString();
+                this.Close();
             }
 
             else

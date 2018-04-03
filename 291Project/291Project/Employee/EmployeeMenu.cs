@@ -34,5 +34,13 @@ namespace _291Project
             AddCustomer add = new AddCustomer();
             add.Show();
         }
+
+        private void NewOrder_Click(object sender, EventArgs e)
+        {
+            Employee.ConfirmOrder order = new Employee.ConfirmOrder();
+            order.Show();
+        }
+
+
     }
 }
