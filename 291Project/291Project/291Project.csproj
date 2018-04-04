@@ -60,16 +60,28 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Customer\CreateOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customer\CreateOrder.Designer.cs">
+      <DependentUpon>CreateOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Customer\CustomerMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customer\CustomerMenu.Designer.cs">
+      <DependentUpon>CustomerMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Customer\CustomerMovieSuggestions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customer\CustomerMovieSuggestions.Designer.cs">
+      <DependentUpon>CustomerMovieSuggestions.cs</DependentUpon>
+    </Compile>
     <Compile Include="DataSet11.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSet1.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="AddCustomer.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AddCustomer.Designer.cs">
-      <DependentUpon>AddCustomer.cs</DependentUpon>
     </Compile>
     <Compile Include="Employee\EmployeeMenu.cs">
       <SubType>Form</SubType>
@@ -101,10 +113,19 @@
     <Compile Include="Manager\MovieEditPage.Designer.cs">
       <DependentUpon>MovieEditPage.cs</DependentUpon>
     </Compile>
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="AddCustomer.resx">
-      <DependentUpon>AddCustomer.cs</DependentUpon>
+    <EmbeddedResource Include="Customer\CreateOrder.resx">
+      <DependentUpon>CreateOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customer\CustomerMenu.resx">
+      <DependentUpon>CustomerMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customer\CustomerMovieSuggestions.resx">
+      <DependentUpon>CustomerMovieSuggestions.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Employee\EmployeeMenu.resx">
       <DependentUpon>EmployeeMenu.cs</DependentUpon>
@@ -121,6 +142,14 @@
     <EmbeddedResource Include="Manager\MovieEditPage.resx">
       <DependentUpon>MovieEditPage.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="obj\Debug\_291Project.AddCustomer.resources" />
+    <EmbeddedResource Include="obj\Debug\_291Project.EmployeeMenu.resources" />
+    <EmbeddedResource Include="obj\Debug\_291Project.Login.resources" />
+    <EmbeddedResource Include="obj\Debug\_291Project.Manager.EmployeeEditPage.resources" />
+    <EmbeddedResource Include="obj\Debug\_291Project.Manager.MovieEditPage.resources" />
+    <EmbeddedResource Include="obj\Debug\_291Project.Manager.SalesReport.resources" />
+    <EmbeddedResource Include="obj\Debug\_291Project.ManagerMenu.resources" />
+    <EmbeddedResource Include="obj\Debug\_291Project.Properties.Resources.resources" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -141,6 +170,11 @@
     <None Include="DataSet1.xss">
       <DependentUpon>DataSet1.xsd</DependentUpon>
     </None>
+    <None Include="obj\Debug\291Project.csproj.CoreCompileInputs.cache" />
+    <None Include="obj\Debug\291Project.csproj.GenerateResource.Cache" />
+    <None Include="obj\Debug\291Project.csprojResolveAssemblyReference.cache" />
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferences.cache" />
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -165,6 +199,12 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="obj\Debug\291Project.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\291Project.exe" />
+    <Content Include="obj\Debug\291Project.pdb" />
+    <Content Include="obj\Debug\TempPE\DataSet11.Designer.cs.dll" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
