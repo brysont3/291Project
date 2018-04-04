@@ -30,13 +30,15 @@
         {
             this.CreateOrder = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.MovieSuggestionButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // CreateOrder
             // 
-            this.CreateOrder.Location = new System.Drawing.Point(73, 66);
+            this.CreateOrder.Location = new System.Drawing.Point(49, 43);
+            this.CreateOrder.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.CreateOrder.Name = "CreateOrder";
-            this.CreateOrder.Size = new System.Drawing.Size(150, 76);
+            this.CreateOrder.Size = new System.Drawing.Size(100, 49);
             this.CreateOrder.TabIndex = 0;
             this.CreateOrder.Text = "Create an order";
             this.CreateOrder.UseVisualStyleBackColor = true;
@@ -44,21 +46,34 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(456, 380);
+            this.button2.Location = new System.Drawing.Point(304, 247);
+            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 34);
+            this.button2.Size = new System.Drawing.Size(50, 22);
             this.button2.TabIndex = 1;
             this.button2.Text = "Logout";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.LogoutButton_Click);
             // 
+            // MovieSuggestionButton
+            // 
+            this.MovieSuggestionButton.Location = new System.Drawing.Point(200, 43);
+            this.MovieSuggestionButton.Name = "MovieSuggestionButton";
+            this.MovieSuggestionButton.Size = new System.Drawing.Size(101, 49);
+            this.MovieSuggestionButton.TabIndex = 2;
+            this.MovieSuggestionButton.Text = "Movie Suggestions";
+            this.MovieSuggestionButton.UseVisualStyleBackColor = true;
+            this.MovieSuggestionButton.Click += new System.EventHandler(this.MovieSuggestionButton_Click);
+            // 
             // CustomerMenu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(558, 426);
+            this.ClientSize = new System.Drawing.Size(372, 277);
+            this.Controls.Add(this.MovieSuggestionButton);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.CreateOrder);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "CustomerMenu";
             this.Text = "CustomerMenu";
             this.ResumeLayout(false);
@@ -69,5 +84,6 @@
 
         private System.Windows.Forms.Button CreateOrder;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button MovieSuggestionButton;
     }
 }

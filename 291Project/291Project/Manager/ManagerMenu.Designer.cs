@@ -29,12 +29,15 @@
         private void InitializeComponent()
         {
             this.LogoutButton = new System.Windows.Forms.Button();
-            this.MovieButton = new System.Windows.Forms.Button();
+            this.EditMovieButton = new System.Windows.Forms.Button();
             this.EmployeeButton = new System.Windows.Forms.Button();
             this.SalesReportButton = new System.Windows.Forms.Button();
             this.MovieRentalButton = new System.Windows.Forms.Button();
             this.MostActiveCustomersButton = new System.Windows.Forms.Button();
             this.MostActiveEmployeesButton = new System.Windows.Forms.Button();
+            this.NewCustomerButton = new System.Windows.Forms.Button();
+            this.NewEmployeeButton = new System.Windows.Forms.Button();
+            this.MovieButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // LogoutButton
@@ -47,15 +50,15 @@
             this.LogoutButton.UseVisualStyleBackColor = true;
             this.LogoutButton.Click += new System.EventHandler(this.LogoutButton_Click);
             // 
-            // MovieButton
+            // EditMovieButton
             // 
-            this.MovieButton.Location = new System.Drawing.Point(51, 59);
-            this.MovieButton.Name = "MovieButton";
-            this.MovieButton.Size = new System.Drawing.Size(124, 55);
-            this.MovieButton.TabIndex = 1;
-            this.MovieButton.Text = "Movies";
-            this.MovieButton.UseVisualStyleBackColor = true;
-            this.MovieButton.Click += new System.EventHandler(this.MovieButton_Click);
+            this.EditMovieButton.Location = new System.Drawing.Point(51, 393);
+            this.EditMovieButton.Name = "EditMovieButton";
+            this.EditMovieButton.Size = new System.Drawing.Size(124, 55);
+            this.EditMovieButton.TabIndex = 1;
+            this.EditMovieButton.Text = "Edit Movies";
+            this.EditMovieButton.UseVisualStyleBackColor = true;
+            this.EditMovieButton.Click += new System.EventHandler(this.EditMovieButton_Click);
             // 
             // EmployeeButton
             // 
@@ -107,17 +110,50 @@
             this.MostActiveEmployeesButton.UseVisualStyleBackColor = true;
             this.MostActiveEmployeesButton.Click += new System.EventHandler(this.MostActiveEmployeesButton_Click);
             // 
+            // NewCustomerButton
+            // 
+            this.NewCustomerButton.Location = new System.Drawing.Point(283, 232);
+            this.NewCustomerButton.Name = "NewCustomerButton";
+            this.NewCustomerButton.Size = new System.Drawing.Size(120, 60);
+            this.NewCustomerButton.TabIndex = 7;
+            this.NewCustomerButton.Text = "New Customer";
+            this.NewCustomerButton.UseVisualStyleBackColor = true;
+            this.NewCustomerButton.Click += new System.EventHandler(this.NewCustomerButton_Click);
+            // 
+            // NewEmployeeButton
+            // 
+            this.NewEmployeeButton.Location = new System.Drawing.Point(283, 317);
+            this.NewEmployeeButton.Name = "NewEmployeeButton";
+            this.NewEmployeeButton.Size = new System.Drawing.Size(120, 57);
+            this.NewEmployeeButton.TabIndex = 8;
+            this.NewEmployeeButton.Text = "New Employee";
+            this.NewEmployeeButton.UseVisualStyleBackColor = true;
+            this.NewEmployeeButton.Click += new System.EventHandler(this.NewEmployeeButton_Click);
+            // 
+            // MovieButton
+            // 
+            this.MovieButton.Location = new System.Drawing.Point(51, 59);
+            this.MovieButton.Name = "MovieButton";
+            this.MovieButton.Size = new System.Drawing.Size(124, 55);
+            this.MovieButton.TabIndex = 9;
+            this.MovieButton.Text = "Movies";
+            this.MovieButton.UseVisualStyleBackColor = true;
+            this.MovieButton.Click += new System.EventHandler(this.MovieButton_Click);
+            // 
             // ManagerMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(588, 535);
+            this.Controls.Add(this.MovieButton);
+            this.Controls.Add(this.NewEmployeeButton);
+            this.Controls.Add(this.NewCustomerButton);
             this.Controls.Add(this.MostActiveEmployeesButton);
             this.Controls.Add(this.MostActiveCustomersButton);
             this.Controls.Add(this.MovieRentalButton);
             this.Controls.Add(this.SalesReportButton);
             this.Controls.Add(this.EmployeeButton);
-            this.Controls.Add(this.MovieButton);
+            this.Controls.Add(this.EditMovieButton);
             this.Controls.Add(this.LogoutButton);
             this.Name = "ManagerMenu";
             this.Text = "ManagerMenu";
@@ -128,11 +164,14 @@
         #endregion
 
         private System.Windows.Forms.Button LogoutButton;
-        private System.Windows.Forms.Button MovieButton;
+        private System.Windows.Forms.Button EditMovieButton;
         private System.Windows.Forms.Button EmployeeButton;
         private System.Windows.Forms.Button SalesReportButton;
         private System.Windows.Forms.Button MovieRentalButton;
         private System.Windows.Forms.Button MostActiveCustomersButton;
         private System.Windows.Forms.Button MostActiveEmployeesButton;
+        private System.Windows.Forms.Button NewCustomerButton;
+        private System.Windows.Forms.Button NewEmployeeButton;
+        private System.Windows.Forms.Button MovieButton;
     }
 }

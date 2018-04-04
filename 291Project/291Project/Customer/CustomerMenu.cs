@@ -29,5 +29,11 @@ namespace _291Project.Employee
             CreateOrder createOrder = new CreateOrder();
             createOrder.Show();
         }
+
+        private void MovieSuggestionButton_Click(object sender, EventArgs e)
+        {
+            Customer.CustomerMovieSuggestions customerMovieSuggestions = new Customer.CustomerMovieSuggestions();
+            customerMovieSuggestions.Show();
+        }
     }
 }

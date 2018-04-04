@@ -25,12 +25,6 @@ namespace _291Project
             this.Close();
         }
 
-        private void MovieButton_Click(object sender, EventArgs e)
-        {
-            MovieEditPage movieEditPage = new MovieEditPage();
-            movieEditPage.Show();
-        }
-
         private void EmployeeButton_Click(object sender, EventArgs e)
         {
             EmployeeEditPage employeeEditPage = new EmployeeEditPage();
@@ -59,6 +53,31 @@ namespace _291Project
         {
             MostActiveEmployees mostActiveEmployees = new MostActiveEmployees();
             mostActiveEmployees.Show();
+        }
+
+        private void NewCustomerButton_Click(object sender, EventArgs e)
+        {
+            AddCustomer addCustomer = new AddCustomer();
+            addCustomer.Show();
+        }
+
+        private void NewEmployeeButton_Click(object sender, EventArgs e)
+        {
+            AddEmployee addEmployee = new AddEmployee();
+            addEmployee.Show();
+        }
+
+        private void MovieButton_Click(object sender, EventArgs e)
+        {
+            MovieList movieList = new MovieList();
+            movieList.Show();
+        }
+
+        private void EditMovieButton_Click(object sender, EventArgs e)
+        {
+            MovieEditPage movieEditPage = new MovieEditPage();
+            movieEditPage.Show();
+
         }
     }
 }
