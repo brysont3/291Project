@@ -41,6 +41,11 @@ namespace _291Project
             order.Show();
         }
 
+        private void MovieSuggestionButton_Click(object sender, EventArgs e)
+        {
+            Employee.MovieSuggestions movieSuggestions = new Employee.MovieSuggestions();
+            movieSuggestions.Show();
 
+        }
     }
 }

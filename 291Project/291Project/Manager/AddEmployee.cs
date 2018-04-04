@@ -9,18 +9,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace _291Project
+namespace _291Project.Manager
 {
-    public partial class AddCustomer : Form
+    public partial class AddEmployee : Form
     {
-        public AddCustomer()
+        public AddEmployee()
         {
             InitializeComponent();
-        }
-
-        private void CustomerCancel_Click(object sender, EventArgs e)
-        {
-            this.Close();
         }
 
         private void CancelButton1_Click(object sender, EventArgs e)
@@ -45,28 +40,29 @@ namespace _291Project
                     ConnectionString = str
                 };
                 con.Open();
-                SqlCommand cmd = new SqlCommand("Insert into Customer(FirstName, LastName, City, State, " +
-                    "ZipCode, Telephone, Email, Password, AccountCreationDate, CreditCard, AccountType) " +
-                    "Values(@FirstName, @LastName, @City, @State, @ZipCode, @Telephone, @Email, @Password, @AccountCreationDate, " +
-                    "@CreditCard, @AccountType)", con);
+                SqlCommand cmd = new SqlCommand("Insert into Employee(SSN, FirstName, LastName, City, State, " +
+                    "ZipCode, Email, Password, Telephone, StartDate, HourlyRate, Type) " +
+                    "Values(@SSN, @FirstName, @LastName, @City, @State, @ZipCode, @Email, @Password, @Telephone, @AccountCreationDate, " +
+                    "@HourlyRate, @AccountType)", con);
+                cmd.Parameters.AddWithValue("@SSN", SSNTextbox.Text);
                 cmd.Parameters.AddWithValue("@FirstName", FirstNameTextbox.Text);
                 cmd.Parameters.AddWithValue("@LastName", LastNameTextbox.Text);
                 cmd.Parameters.AddWithValue("@City", CityTextbox.Text);
                 cmd.Parameters.AddWithValue("@State", StateTextbox.Text);
                 cmd.Parameters.AddWithValue("@ZipCode", ZipTextbox.Text);
-                cmd.Parameters.AddWithValue("@Telephone", TelephoneTextbox.Text);
                 cmd.Parameters.AddWithValue("@Email", EmailTextbox.Text);
                 cmd.Parameters.AddWithValue("@Password", PasswordTextbox.Text);
+                cmd.Parameters.AddWithValue("@Telephone", TelephoneTextbox.Text);
                 cmd.Parameters.AddWithValue("@AccountCreationDate", DateTime.Now.Date);
-                cmd.Parameters.AddWithValue("@CreditCard", CreditCardTextbox.Text);
-                cmd.Parameters.AddWithValue("@AccountType", comboBox1.SelectedValue);
+                cmd.Parameters.AddWithValue("@HourlyRate", HourlyWageTextBox.Text);
+                cmd.Parameters.AddWithValue("@AccountType", comboBox1.Text);
 
                 cmd.ExecuteNonQuery();
                 label13.Text = "Successfully Added " + FirstNameTextbox.Text + " " + LastNameTextbox.Text;
                 label13.Visible = true;
 
                 //Clear the textboxes
-
+                SSNTextbox.Clear();
                 FirstNameTextbox.Clear();
                 FirstNameTextbox.Clear();
                 LastNameTextbox.Clear();
@@ -77,14 +73,9 @@ namespace _291Project
                 PasswordTextbox.Clear();
                 ConfirmTextbox.Clear();
                 TelephoneTextbox.Clear();
-                CreditCardTextbox.Clear();
+                HourlyWageTextBox.Clear();
                 comboBox1.SelectedIndex = -1;
             }
-        }
-
-        private void AddCustomer_Load(object sender, EventArgs e)
-        {
-            this.accountInfoTableAdapter.Fill(this.dataSet1.AccountInfo);
         }
     }
 }

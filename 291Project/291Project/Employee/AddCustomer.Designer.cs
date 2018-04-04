@@ -306,6 +306,7 @@
             this.ConfirmTextbox.Name = "ConfirmTextbox";
             this.ConfirmTextbox.Size = new System.Drawing.Size(100, 20);
             this.ConfirmTextbox.TabIndex = 9;
+            this.ConfirmTextbox.UseSystemPasswordChar = true;
             // 
             // PasswordTextbox
             // 
@@ -313,6 +314,7 @@
             this.PasswordTextbox.Name = "PasswordTextbox";
             this.PasswordTextbox.Size = new System.Drawing.Size(100, 20);
             this.PasswordTextbox.TabIndex = 8;
+            this.PasswordTextbox.UseSystemPasswordChar = true;
             // 
             // AddCustomer
             // 
