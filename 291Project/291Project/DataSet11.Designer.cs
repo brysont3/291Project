@@ -6133,15 +6133,15 @@ namespace _291Project.dataSet1TableAdapters {
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Cost", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Cost", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[AccountInfo] ([Cost]) VALUES (@Cost);\r\nSELECT AccountType, Cos" +
-                "t FROM AccountInfo WHERE (AccountType = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[AccountInfo] ([Cost]) VALUES (@Cost);\nSELECT AccountType, Cost" +
+                " FROM AccountInfo WHERE (AccountType = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Cost", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Cost", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
             this._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[AccountInfo] SET [Cost] = @Cost WHERE (([AccountType] = @Original_A" +
-                "ccountType) AND ([Cost] = @Original_Cost));\r\nSELECT AccountType, Cost FROM Accou" +
-                "ntInfo WHERE (AccountType = @AccountType)";
+                "ccountType) AND ([Cost] = @Original_Cost));\nSELECT AccountType, Cost FROM Accoun" +
+                "tInfo WHERE (AccountType = @AccountType)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Cost", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Cost", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_AccountType", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AccountType", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
@@ -6458,8 +6458,8 @@ namespace _291Project.dataSet1TableAdapters {
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
             this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Actor] ([FirstName], [LastName], [Gender], [Age], [Rating]) VA" +
-                "LUES (@FirstName, @LastName, @Gender, @Age, @Rating);\r\nSELECT ActorID, FirstName" +
-                ", LastName, Gender, Age, Rating FROM Actor WHERE (ActorID = SCOPE_IDENTITY())";
+                "LUES (@FirstName, @LastName, @Gender, @Age, @Rating);\nSELECT ActorID, FirstName," +
+                " LastName, Gender, Age, Rating FROM Actor WHERE (ActorID = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FirstName", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FirstName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@LastName", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "LastName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -6954,12 +6954,18 @@ SELECT CID, FirstName, LastName, City, State, ZipCode, Telephone, Email, Passwor
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[2];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT CID, FirstName, LastName, City, State, ZipCode, Telephone, Email, Password" +
                 ", AccountCreationDate, CreditCard, Rating, AccountType FROM dbo.Customer";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[1].Connection = this.Connection;
+            this._commandCollection[1].CommandText = "SELECT CID, FirstName, LastName, City, State, ZipCode, Telephone, Email, Password" +
+                ", AccountCreationDate, CreditCard, Rating, AccountType FROM dbo.Customer\r\nWHERE " +
+                "(CID = 2)";
+            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6984,6 +6990,19 @@ SELECT CID, FirstName, LastName, City, State, ZipCode, Telephone, Email, Passwor
             dataSet1.CustomerDataTable dataTable = new dataSet1.CustomerDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillCustomer(dataSet1.CustomerDataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -8159,14 +8178,14 @@ SELECT EID, SSN, FirstName, LastName, City, State, ZipCode, Email, Password, Tel
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Genre", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Genre", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Genre] ([Genre]) VALUES (@Genre);\r\nSELECT GID, Genre FROM Genr" +
-                "e WHERE (GID = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Genre] ([Genre]) VALUES (@Genre);\nSELECT GID, Genre FROM Genre" +
+                " WHERE (GID = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Genre", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Genre", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
             this._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[Genre] SET [Genre] = @Genre WHERE (([GID] = @Original_GID) AND ([Ge" +
-                "nre] = @Original_Genre));\r\nSELECT GID, Genre FROM Genre WHERE (GID = @GID)";
+                "nre] = @Original_Genre));\nSELECT GID, Genre FROM Genre WHERE (GID = @GID)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Genre", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Genre", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_GID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
@@ -8483,9 +8502,8 @@ SELECT EID, SSN, FirstName, LastName, City, State, ZipCode, Email, Password, Tel
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
             this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Movie] ([MovieName], [GID], [DistributionFee], [NumCopies]) VA" +
-                "LUES (@MovieName, @GID, @DistributionFee, @NumCopies);\r\nSELECT MovieID, MovieNam" +
-                "e, GID, DistributionFee, NumCopies FROM Movie WHERE (MovieID = SCOPE_IDENTITY())" +
-                "";
+                "LUES (@MovieName, @GID, @DistributionFee, @NumCopies);\nSELECT MovieID, MovieName" +
+                ", GID, DistributionFee, NumCopies FROM Movie WHERE (MovieID = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MovieName", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MovieName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@GID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -8864,17 +8882,17 @@ SELECT MovieID, MovieName, GID, DistributionFee, NumCopies FROM Movie WHERE (Mov
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_MovieID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MovieID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[MoviesIn] ([ActorID], [MovieID]) VALUES (@ActorID, @MovieID);\r" +
-                "\nSELECT ActorID, MovieID FROM MoviesIn WHERE (ActorID = @ActorID) AND (MovieID =" +
-                " @MovieID)";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[MoviesIn] ([ActorID], [MovieID]) VALUES (@ActorID, @MovieID);\n" +
+                "SELECT ActorID, MovieID FROM MoviesIn WHERE (ActorID = @ActorID) AND (MovieID = " +
+                "@MovieID)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ActorID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ActorID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MovieID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MovieID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
             this._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[MoviesIn] SET [ActorID] = @ActorID, [MovieID] = @MovieID WHERE (([A" +
-                "ctorID] = @Original_ActorID) AND ([MovieID] = @Original_MovieID));\r\nSELECT Actor" +
-                "ID, MovieID FROM MoviesIn WHERE (ActorID = @ActorID) AND (MovieID = @MovieID)";
+                "ctorID] = @Original_ActorID) AND ([MovieID] = @Original_MovieID));\nSELECT ActorI" +
+                "D, MovieID FROM MoviesIn WHERE (ActorID = @ActorID) AND (MovieID = @MovieID)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ActorID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ActorID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MovieID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MovieID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -9174,8 +9192,8 @@ SELECT MovieID, MovieName, GID, DistributionFee, NumCopies FROM Movie WHERE (Mov
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
             this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Order] ([OrderDate], [ReturnDate], [MovieID], [CID], [EID]) VA" +
-                "LUES (@OrderDate, @ReturnDate, @MovieID, @CID, @EID);\r\nSELECT OrderID, OrderDate" +
-                ", ReturnDate, MovieID, CID, EID FROM [Order] WHERE (OrderID = SCOPE_IDENTITY())";
+                "LUES (@OrderDate, @ReturnDate, @MovieID, @CID, @EID);\nSELECT OrderID, OrderDate," +
+                " ReturnDate, MovieID, CID, EID FROM [Order] WHERE (OrderID = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@OrderDate", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "OrderDate", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ReturnDate", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ReturnDate", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -9532,8 +9550,8 @@ SELECT OrderID, OrderDate, ReturnDate, MovieID, CID, EID FROM [Order] WHERE (Ord
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
             this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Payment] ([CID], [AccountType], [Date], [Paid]) VALUES (@CID, " +
-                "@AccountType, @Date, @Paid);\r\nSELECT PID, CID, AccountType, Date, Paid FROM Paym" +
-                "ent WHERE (PID = SCOPE_IDENTITY())";
+                "@AccountType, @Date, @Paid);\nSELECT PID, CID, AccountType, Date, Paid FROM Payme" +
+                "nt WHERE (PID = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@AccountType", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AccountType", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -9905,8 +9923,8 @@ SELECT PID, CID, AccountType, Date, Paid FROM Payment WHERE (PID = @PID)";
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
             this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Rate] ([CID], [MovieID], [Rating]) VALUES (@CID, @MovieID, @Ra" +
-                "ting);\r\nSELECT CID, MovieID, Rating FROM Rate WHERE (CID = @CID) AND (MovieID = " +
-                "@MovieID)";
+                "ting);\nSELECT CID, MovieID, Rating FROM Rate WHERE (CID = @CID) AND (MovieID = @" +
+                "MovieID)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MovieID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MovieID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -10241,8 +10259,8 @@ SELECT CID, MovieID, Rating FROM Rate WHERE (CID = @CID) AND (MovieID = @MovieID
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
             this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[RentQueue] ([CID], [MovieID], [QueueNumber]) VALUES (@CID, @Mo" +
-                "vieID, @QueueNumber);\r\nSELECT CID, MovieID, QueueNumber FROM RentQueue WHERE (CI" +
-                "D = @CID) AND (MovieID = @MovieID)";
+                "vieID, @QueueNumber);\nSELECT CID, MovieID, QueueNumber FROM RentQueue WHERE (CID" +
+                " = @CID) AND (MovieID = @MovieID)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MovieID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MovieID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));

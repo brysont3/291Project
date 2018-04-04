@@ -78,10 +78,28 @@
     <Compile Include="Customer\CustomerMovieSuggestions.Designer.cs">
       <DependentUpon>CustomerMovieSuggestions.cs</DependentUpon>
     </Compile>
+    <Compile Include="Customer\InfoEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customer\InfoEdit.Designer.cs">
+      <DependentUpon>InfoEdit.cs</DependentUpon>
+    </Compile>
     <Compile Include="DataSet11.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Employee\AddCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employee\AddCustomer.Designer.cs">
+      <DependentUpon>AddCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Employee\ConfirmOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employee\ConfirmOrder.Designer.cs">
+      <DependentUpon>ConfirmOrder.cs</DependentUpon>
     </Compile>
     <Compile Include="Employee\EmployeeMenu.cs">
       <SubType>Form</SubType>
@@ -89,11 +107,29 @@
     <Compile Include="Employee\EmployeeMenu.Designer.cs">
       <DependentUpon>EmployeeMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="Employee\MovieSuggestions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employee\MovieSuggestions.Designer.cs">
+      <DependentUpon>MovieSuggestions.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Employee\MailingList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employee\MailingList.Designer.cs">
+      <DependentUpon>MailingList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\AddEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manager\AddEmployee.Designer.cs">
+      <DependentUpon>AddEmployee.cs</DependentUpon>
     </Compile>
     <Compile Include="Manager\EmployeeEditPage.cs">
       <SubType>Form</SubType>
@@ -107,11 +143,41 @@
     <Compile Include="Manager\ManagerMenu.Designer.cs">
       <DependentUpon>ManagerMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="Manager\MostActiveCustomers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manager\MostActiveCustomers.Designer.cs">
+      <DependentUpon>MostActiveCustomers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\MostActiveEmployees.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manager\MostActiveEmployees.Designer.cs">
+      <DependentUpon>MostActiveEmployees.cs</DependentUpon>
+    </Compile>
     <Compile Include="Manager\MovieEditPage.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Manager\MovieEditPage.Designer.cs">
       <DependentUpon>MovieEditPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\MovieList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manager\MovieList.Designer.cs">
+      <DependentUpon>MovieList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\MovieRentals.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manager\MovieRentals.Designer.cs">
+      <DependentUpon>MovieRentals.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\SalesReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manager\SalesReport.Designer.cs">
+      <DependentUpon>SalesReport.cs</DependentUpon>
     </Compile>
     <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
@@ -127,11 +193,29 @@
     <EmbeddedResource Include="Customer\CustomerMovieSuggestions.resx">
       <DependentUpon>CustomerMovieSuggestions.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Customer\InfoEdit.resx">
+      <DependentUpon>InfoEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employee\AddCustomer.resx">
+      <DependentUpon>AddCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employee\ConfirmOrder.resx">
+      <DependentUpon>ConfirmOrder.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Employee\EmployeeMenu.resx">
       <DependentUpon>EmployeeMenu.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Employee\MovieSuggestions.resx">
+      <DependentUpon>MovieSuggestions.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employee\MailingList.resx">
+      <DependentUpon>MailingList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manager\AddEmployee.resx">
+      <DependentUpon>AddEmployee.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Manager\EmployeeEditPage.resx">
       <DependentUpon>EmployeeEditPage.cs</DependentUpon>
@@ -139,8 +223,23 @@
     <EmbeddedResource Include="Manager\ManagerMenu.resx">
       <DependentUpon>ManagerMenu.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Manager\MostActiveCustomers.resx">
+      <DependentUpon>MostActiveCustomers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manager\MostActiveEmployees.resx">
+      <DependentUpon>MostActiveEmployees.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Manager\MovieEditPage.resx">
       <DependentUpon>MovieEditPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manager\MovieList.resx">
+      <DependentUpon>MovieList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manager\MovieRentals.resx">
+      <DependentUpon>MovieRentals.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manager\SalesReport.resx">
+      <DependentUpon>SalesReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="obj\Debug\_291Project.AddCustomer.resources" />
     <EmbeddedResource Include="obj\Debug\_291Project.EmployeeMenu.resources" />
