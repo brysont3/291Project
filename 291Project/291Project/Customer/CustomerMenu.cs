@@ -41,5 +41,11 @@ namespace _291Project.Employee
             Customer.InfoEdit info = new Customer.InfoEdit();
             info.Show();
         }
+
+        private void view_movies_Click(object sender, EventArgs e)
+        {
+            CustomerMovie movie = new CustomerMovie();
+            movie.Show();
+        }
     }
 }

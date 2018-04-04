@@ -32,6 +32,7 @@
             this.button2 = new System.Windows.Forms.Button();
             this.MovieSuggestionButton = new System.Windows.Forms.Button();
             this.edit_info = new System.Windows.Forms.Button();
+            this.view_movies = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // CreateOrder
@@ -77,11 +78,23 @@
             this.edit_info.UseVisualStyleBackColor = true;
             this.edit_info.Click += new System.EventHandler(this.edit_info_Click);
             // 
+            // view_movies
+            // 
+            this.view_movies.Location = new System.Drawing.Point(200, 144);
+            this.view_movies.Margin = new System.Windows.Forms.Padding(2);
+            this.view_movies.Name = "view_movies";
+            this.view_movies.Size = new System.Drawing.Size(100, 49);
+            this.view_movies.TabIndex = 4;
+            this.view_movies.Text = "View Movies";
+            this.view_movies.UseVisualStyleBackColor = true;
+            this.view_movies.Click += new System.EventHandler(this.view_movies_Click);
+            // 
             // CustomerMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(372, 277);
+            this.Controls.Add(this.view_movies);
             this.Controls.Add(this.edit_info);
             this.Controls.Add(this.MovieSuggestionButton);
             this.Controls.Add(this.button2);
@@ -99,5 +112,6 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button MovieSuggestionButton;
         private System.Windows.Forms.Button edit_info;
+        private System.Windows.Forms.Button view_movies;
     }
 }

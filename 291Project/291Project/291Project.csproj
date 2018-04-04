@@ -72,6 +72,12 @@
     <Compile Include="Customer\CustomerMenu.Designer.cs">
       <DependentUpon>CustomerMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="Customer\CustomerMovie.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customer\CustomerMovie.designer.cs">
+      <DependentUpon>CustomerMovie.cs</DependentUpon>
+    </Compile>
     <Compile Include="Customer\CustomerMovieSuggestions.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -189,6 +195,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Customer\CustomerMenu.resx">
       <DependentUpon>CustomerMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customer\CustomerMovie.resx">
+      <DependentUpon>CustomerMovie.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Customer\CustomerMovieSuggestions.resx">
       <DependentUpon>CustomerMovieSuggestions.cs</DependentUpon>

@@ -56,3 +56,4 @@ F:\Tristan\Desktop\Coding\291\291Project\291Project\obj\Debug\291Project.csproj.
 F:\Tristan\Desktop\Coding\291\291Project\291Project\obj\Debug\291Project.exe
 F:\Tristan\Desktop\Coding\291\291Project\291Project\obj\Debug\291Project.pdb
 F:\Tristan\Desktop\Coding\291\291Project\291Project\obj\Debug\_291Project.Customer.InfoEdit.resources
+F:\Tristan\Desktop\Coding\291\291Project\291Project\obj\Debug\_291Project.CustomerMovie.resources
