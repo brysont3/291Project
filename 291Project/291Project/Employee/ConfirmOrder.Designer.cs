@@ -309,6 +309,7 @@
             this.eIDTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.orderBindingSource, "EID", true));
             this.eIDTextBox.Location = new System.Drawing.Point(134, 260);
             this.eIDTextBox.Name = "eIDTextBox";
+            this.eIDTextBox.ReadOnly = true;
             this.eIDTextBox.Size = new System.Drawing.Size(200, 26);
             this.eIDTextBox.TabIndex = 12;
             // 

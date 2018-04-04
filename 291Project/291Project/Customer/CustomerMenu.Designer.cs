@@ -40,7 +40,7 @@
             this.CreateOrder.Name = "CreateOrder";
             this.CreateOrder.Size = new System.Drawing.Size(150, 75);
             this.CreateOrder.TabIndex = 0;
-            this.CreateOrder.Text = "Create an order";
+            this.CreateOrder.Text = "Create an Order";
             this.CreateOrder.UseVisualStyleBackColor = true;
             this.CreateOrder.Click += new System.EventHandler(this.CreateOrder_Click);
             // 
