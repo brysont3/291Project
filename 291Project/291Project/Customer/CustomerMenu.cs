@@ -35,5 +35,11 @@ namespace _291Project.Employee
             Customer.CustomerMovieSuggestions customerMovieSuggestions = new Customer.CustomerMovieSuggestions();
             customerMovieSuggestions.Show();
         }
+
+        private void ReturnOrder_Click(object sender, EventArgs e)
+        {
+            Customer.ReturnMovie returnMovie = new Customer.ReturnMovie();
+            returnMovie.Show();
+        }
     }
 }
