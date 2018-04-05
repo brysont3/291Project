@@ -44,5 +44,10 @@ namespace _291Project.Customer
         {
             this.Close();
         }
+
+        private void orderBindingSource_CurrentChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

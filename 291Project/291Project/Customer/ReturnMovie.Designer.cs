@@ -62,6 +62,7 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.ReturnMovieButton = new System.Windows.Forms.Button();
             this.CancelButton = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             orderIDLabel = new System.Windows.Forms.Label();
             orderDateLabel = new System.Windows.Forms.Label();
             returnDateLabel = new System.Windows.Forms.Label();
@@ -138,6 +139,7 @@
             this.orderBindingSource.DataMember = "Order";
             this.orderBindingSource.DataSource = this.dataSet1;
             this.orderBindingSource.Filter = "ReturnDate IS NULL AND EID IS NOT NULL AND CID = 0";
+            this.orderBindingSource.CurrentChanged += new System.EventHandler(this.orderBindingSource_CurrentChanged);
             // 
             // orderTableAdapter
             // 
@@ -186,7 +188,7 @@
             this.orderBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.orderBindingNavigator.Name = "orderBindingNavigator";
             this.orderBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.orderBindingNavigator.Size = new System.Drawing.Size(705, 31);
+            this.orderBindingNavigator.Size = new System.Drawing.Size(715, 31);
             this.orderBindingNavigator.TabIndex = 0;
             this.orderBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -349,9 +351,9 @@
             // 
             // ReturnMovieButton
             // 
-            this.ReturnMovieButton.Location = new System.Drawing.Point(516, 105);
+            this.ReturnMovieButton.Location = new System.Drawing.Point(516, 152);
             this.ReturnMovieButton.Name = "ReturnMovieButton";
-            this.ReturnMovieButton.Size = new System.Drawing.Size(119, 49);
+            this.ReturnMovieButton.Size = new System.Drawing.Size(143, 70);
             this.ReturnMovieButton.TabIndex = 14;
             this.ReturnMovieButton.Text = "Return Movie";
             this.ReturnMovieButton.UseVisualStyleBackColor = true;
@@ -359,19 +361,29 @@
             // 
             // CancelButton
             // 
-            this.CancelButton.Location = new System.Drawing.Point(516, 191);
+            this.CancelButton.Location = new System.Drawing.Point(516, 253);
             this.CancelButton.Name = "CancelButton";
-            this.CancelButton.Size = new System.Drawing.Size(119, 49);
+            this.CancelButton.Size = new System.Drawing.Size(143, 80);
             this.CancelButton.TabIndex = 15;
             this.CancelButton.Text = "Cancel && Close";
             this.CancelButton.UseVisualStyleBackColor = true;
             this.CancelButton.Click += new System.EventHandler(this.CancelButton_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(118, 83);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(74, 20);
+            this.label1.TabIndex = 16;
+            this.label1.Text = "Order ID:";
+            // 
             // ReturnMovie
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(705, 471);
+            this.ClientSize = new System.Drawing.Size(715, 405);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.CancelButton);
             this.Controls.Add(this.ReturnMovieButton);
             this.Controls.Add(this.comboBox1);
@@ -429,5 +441,6 @@
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Button ReturnMovieButton;
         private System.Windows.Forms.Button CancelButton;
+        private System.Windows.Forms.Label label1;
     }
 }

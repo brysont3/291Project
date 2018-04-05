@@ -32,6 +32,7 @@
             this.button2 = new System.Windows.Forms.Button();
             this.MovieSuggestionButton = new System.Windows.Forms.Button();
             this.ReturnOrder = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // CreateOrder
@@ -75,11 +76,22 @@
             this.ReturnOrder.UseVisualStyleBackColor = true;
             this.ReturnOrder.Click += new System.EventHandler(this.ReturnOrder_Click);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(300, 188);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(150, 75);
+            this.button1.TabIndex = 4;
+            this.button1.Text = "View Your Current Orders";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // CustomerMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(558, 426);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.ReturnOrder);
             this.Controls.Add(this.MovieSuggestionButton);
             this.Controls.Add(this.button2);
@@ -96,5 +108,6 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button MovieSuggestionButton;
         private System.Windows.Forms.Button ReturnOrder;
+        private System.Windows.Forms.Button button1;
     }
 }
