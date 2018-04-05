@@ -59,6 +59,7 @@
             this.eIDTextBox = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
             orderIDLabel = new System.Windows.Forms.Label();
             orderDateLabel = new System.Windows.Forms.Label();
             movieIDLabel = new System.Windows.Forms.Label();
@@ -334,11 +335,21 @@
             this.comboBox1.TabIndex = 15;
             this.comboBox1.ValueMember = "OrderID";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(24, 67);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(74, 20);
+            this.label1.TabIndex = 17;
+            this.label1.Text = "Order ID:";
+            // 
             // ConfirmOrder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(640, 361);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.button1);
             this.Controls.Add(orderIDLabel);
@@ -391,5 +402,6 @@
         private System.Windows.Forms.TextBox eIDTextBox;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label label1;
     }
 }

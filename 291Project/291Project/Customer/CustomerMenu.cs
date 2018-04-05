@@ -41,5 +41,11 @@ namespace _291Project.Employee
             Customer.ReturnMovie returnMovie = new Customer.ReturnMovie();
             returnMovie.Show();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Customer.CurrentOrders currentOrders = new Customer.CurrentOrders();
+            currentOrders.Show();
+        }
     }
 }
