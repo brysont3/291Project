@@ -29,29 +29,29 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ReturnMovie));
             System.Windows.Forms.Label orderIDLabel;
             System.Windows.Forms.Label orderDateLabel;
             System.Windows.Forms.Label returnDateLabel;
             System.Windows.Forms.Label movieIDLabel;
             System.Windows.Forms.Label cIDLabel;
             System.Windows.Forms.Label eIDLabel;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ReturnMovie));
             this.dataSet1 = new _291Project.dataSet1();
             this.orderBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.orderTableAdapter = new _291Project.dataSet1TableAdapters.OrderTableAdapter();
             this.tableAdapterManager = new _291Project.dataSet1TableAdapters.TableAdapterManager();
             this.orderBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
+            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
-            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.orderBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.orderIDTextBox = new System.Windows.Forms.TextBox();
             this.orderDateDateTimePicker = new System.Windows.Forms.DateTimePicker();
@@ -74,20 +74,70 @@
             this.orderBindingNavigator.SuspendLayout();
             this.SuspendLayout();
             // 
+            // orderIDLabel
+            // 
+            orderIDLabel.AutoSize = true;
+            orderIDLabel.Location = new System.Drawing.Point(91, 155);
+            orderIDLabel.Name = "orderIDLabel";
+            orderIDLabel.Size = new System.Drawing.Size(74, 20);
+            orderIDLabel.TabIndex = 1;
+            orderIDLabel.Text = "Order ID:";
+            // 
+            // orderDateLabel
+            // 
+            orderDateLabel.AutoSize = true;
+            orderDateLabel.Location = new System.Drawing.Point(91, 188);
+            orderDateLabel.Name = "orderDateLabel";
+            orderDateLabel.Size = new System.Drawing.Size(92, 20);
+            orderDateLabel.TabIndex = 3;
+            orderDateLabel.Text = "Order Date:";
+            // 
+            // returnDateLabel
+            // 
+            returnDateLabel.AutoSize = true;
+            returnDateLabel.Location = new System.Drawing.Point(91, 220);
+            returnDateLabel.Name = "returnDateLabel";
+            returnDateLabel.Size = new System.Drawing.Size(101, 20);
+            returnDateLabel.TabIndex = 5;
+            returnDateLabel.Text = "Return Date:";
+            // 
+            // movieIDLabel
+            // 
+            movieIDLabel.AutoSize = true;
+            movieIDLabel.Location = new System.Drawing.Point(91, 251);
+            movieIDLabel.Name = "movieIDLabel";
+            movieIDLabel.Size = new System.Drawing.Size(75, 20);
+            movieIDLabel.TabIndex = 7;
+            movieIDLabel.Text = "Movie ID:";
+            // 
+            // cIDLabel
+            // 
+            cIDLabel.AutoSize = true;
+            cIDLabel.Location = new System.Drawing.Point(91, 283);
+            cIDLabel.Name = "cIDLabel";
+            cIDLabel.Size = new System.Drawing.Size(41, 20);
+            cIDLabel.TabIndex = 9;
+            cIDLabel.Text = "CID:";
+            // 
+            // eIDLabel
+            // 
+            eIDLabel.AutoSize = true;
+            eIDLabel.Location = new System.Drawing.Point(91, 315);
+            eIDLabel.Name = "eIDLabel";
+            eIDLabel.Size = new System.Drawing.Size(41, 20);
+            eIDLabel.TabIndex = 11;
+            eIDLabel.Text = "EID:";
+            // 
             // dataSet1
             // 
             this.dataSet1.DataSetName = "dataSet1";
             this.dataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // orderBindingSource
-            //
-            //
-            //string CustomerID = Program.CustomerID.ToString();
+            // 
             this.orderBindingSource.DataMember = "Order";
             this.orderBindingSource.DataSource = this.dataSet1;
-            this.orderBindingSource.Filter = "ReturnDate IS NULL AND EID IS NOT NULL AND CID = " + Program.CustomerID.ToString();
-            
-
+            this.orderBindingSource.Filter = "ReturnDate IS NULL AND EID IS NOT NULL AND CID = 0";
             // 
             // orderTableAdapter
             // 
@@ -140,6 +190,31 @@
             this.orderBindingNavigator.TabIndex = 0;
             this.orderBindingNavigator.Text = "bindingNavigator1";
             // 
+            // bindingNavigatorAddNewItem
+            // 
+            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
+            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
+            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(28, 28);
+            this.bindingNavigatorAddNewItem.Text = "Add new";
+            // 
+            // bindingNavigatorCountItem
+            // 
+            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(54, 28);
+            this.bindingNavigatorCountItem.Text = "of {0}";
+            this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
+            // 
+            // bindingNavigatorDeleteItem
+            // 
+            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
+            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
+            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(28, 28);
+            this.bindingNavigatorDeleteItem.Text = "Delete";
+            // 
             // bindingNavigatorMoveFirstItem
             // 
             this.bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
@@ -172,16 +247,9 @@
             this.bindingNavigatorPositionItem.Text = "0";
             this.bindingNavigatorPositionItem.ToolTipText = "Current position";
             // 
-            // bindingNavigatorCountItem
-            // 
-            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(54, 28);
-            this.bindingNavigatorCountItem.Text = "of {0}";
-            this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
-            // 
             // bindingNavigatorSeparator1
             // 
-            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
             this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 31);
             // 
             // bindingNavigatorMoveNextItem
@@ -204,26 +272,8 @@
             // 
             // bindingNavigatorSeparator2
             // 
-            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
             this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 31);
-            // 
-            // bindingNavigatorAddNewItem
-            // 
-            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
-            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
-            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(28, 28);
-            this.bindingNavigatorAddNewItem.Text = "Add new";
-            // 
-            // bindingNavigatorDeleteItem
-            // 
-            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
-            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
-            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(28, 28);
-            this.bindingNavigatorDeleteItem.Text = "Delete";
             // 
             // orderBindingNavigatorSaveItem
             // 
@@ -234,31 +284,14 @@
             this.orderBindingNavigatorSaveItem.Text = "Save Data";
             this.orderBindingNavigatorSaveItem.Click += new System.EventHandler(this.orderBindingNavigatorSaveItem_Click);
             // 
-            // orderIDLabel
-            // 
-            orderIDLabel.AutoSize = true;
-            orderIDLabel.Location = new System.Drawing.Point(91, 155);
-            orderIDLabel.Name = "orderIDLabel";
-            orderIDLabel.Size = new System.Drawing.Size(74, 20);
-            orderIDLabel.TabIndex = 1;
-            orderIDLabel.Text = "Order ID:";
-            // 
             // orderIDTextBox
             // 
             this.orderIDTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.orderBindingSource, "OrderID", true));
             this.orderIDTextBox.Location = new System.Drawing.Point(198, 152);
             this.orderIDTextBox.Name = "orderIDTextBox";
+            this.orderIDTextBox.ReadOnly = true;
             this.orderIDTextBox.Size = new System.Drawing.Size(200, 26);
             this.orderIDTextBox.TabIndex = 2;
-            // 
-            // orderDateLabel
-            // 
-            orderDateLabel.AutoSize = true;
-            orderDateLabel.Location = new System.Drawing.Point(91, 188);
-            orderDateLabel.Name = "orderDateLabel";
-            orderDateLabel.Size = new System.Drawing.Size(92, 20);
-            orderDateLabel.TabIndex = 3;
-            orderDateLabel.Text = "Order Date:";
             // 
             // orderDateDateTimePicker
             // 
@@ -268,15 +301,6 @@
             this.orderDateDateTimePicker.Size = new System.Drawing.Size(200, 26);
             this.orderDateDateTimePicker.TabIndex = 4;
             // 
-            // returnDateLabel
-            // 
-            returnDateLabel.AutoSize = true;
-            returnDateLabel.Location = new System.Drawing.Point(91, 220);
-            returnDateLabel.Name = "returnDateLabel";
-            returnDateLabel.Size = new System.Drawing.Size(101, 20);
-            returnDateLabel.TabIndex = 5;
-            returnDateLabel.Text = "Return Date:";
-            // 
             // returnDateDateTimePicker
             // 
             this.returnDateDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.orderBindingSource, "ReturnDate", true));
@@ -285,54 +309,30 @@
             this.returnDateDateTimePicker.Size = new System.Drawing.Size(200, 26);
             this.returnDateDateTimePicker.TabIndex = 6;
             // 
-            // movieIDLabel
-            // 
-            movieIDLabel.AutoSize = true;
-            movieIDLabel.Location = new System.Drawing.Point(91, 251);
-            movieIDLabel.Name = "movieIDLabel";
-            movieIDLabel.Size = new System.Drawing.Size(75, 20);
-            movieIDLabel.TabIndex = 7;
-            movieIDLabel.Text = "Movie ID:";
-            // 
             // movieIDTextBox
             // 
             this.movieIDTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.orderBindingSource, "MovieID", true));
             this.movieIDTextBox.Location = new System.Drawing.Point(198, 248);
             this.movieIDTextBox.Name = "movieIDTextBox";
+            this.movieIDTextBox.ReadOnly = true;
             this.movieIDTextBox.Size = new System.Drawing.Size(200, 26);
             this.movieIDTextBox.TabIndex = 8;
-            // 
-            // cIDLabel
-            // 
-            cIDLabel.AutoSize = true;
-            cIDLabel.Location = new System.Drawing.Point(91, 283);
-            cIDLabel.Name = "cIDLabel";
-            cIDLabel.Size = new System.Drawing.Size(41, 20);
-            cIDLabel.TabIndex = 9;
-            cIDLabel.Text = "CID:";
             // 
             // cIDTextBox
             // 
             this.cIDTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.orderBindingSource, "CID", true));
             this.cIDTextBox.Location = new System.Drawing.Point(198, 280);
             this.cIDTextBox.Name = "cIDTextBox";
+            this.cIDTextBox.ReadOnly = true;
             this.cIDTextBox.Size = new System.Drawing.Size(200, 26);
             this.cIDTextBox.TabIndex = 10;
-            // 
-            // eIDLabel
-            // 
-            eIDLabel.AutoSize = true;
-            eIDLabel.Location = new System.Drawing.Point(91, 315);
-            eIDLabel.Name = "eIDLabel";
-            eIDLabel.Size = new System.Drawing.Size(41, 20);
-            eIDLabel.TabIndex = 11;
-            eIDLabel.Text = "EID:";
             // 
             // eIDTextBox
             // 
             this.eIDTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.orderBindingSource, "EID", true));
             this.eIDTextBox.Location = new System.Drawing.Point(198, 312);
             this.eIDTextBox.Name = "eIDTextBox";
+            this.eIDTextBox.ReadOnly = true;
             this.eIDTextBox.Size = new System.Drawing.Size(200, 26);
             this.eIDTextBox.TabIndex = 12;
             // 
