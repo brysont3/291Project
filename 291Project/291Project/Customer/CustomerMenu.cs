@@ -53,5 +53,11 @@ namespace _291Project.Employee
             Customer.Payment payment = new Customer.Payment();
             payment.Show();
         }
+
+        private void OrderHistoryButton_Click(object sender, EventArgs e)
+        {
+            Customer.OrderHistory orderHistory = new Customer.OrderHistory();
+            orderHistory.Show();
+        }
     }
 }
