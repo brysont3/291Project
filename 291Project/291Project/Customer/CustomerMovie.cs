@@ -28,6 +28,8 @@ namespace _291Project
 
         private void CustomerMovie_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'dataSet1.Actor' table. You can move, or remove it, as needed.
+            this.actorTableAdapter.Fill(this.dataSet1.Actor);
             // TODO: This line of code loads data into the 'dataSet1.Genre' table. You can move, or remove it, as needed.
             this.genreTableAdapter.Fill(this.dataSet1.Genre);
             // TODO: This line of code loads data into the 'dataSet1.Genre' table. You can move, or remove it, as needed.
@@ -39,12 +41,12 @@ namespace _291Project
 
         private void movieDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            movieDataGridView.Columns[2].ReadOnly = false;      
             var senderGrid = (DataGridView)sender;
 
             if (senderGrid.Columns[e.ColumnIndex] is DataGridViewButtonColumn &&
                 e.RowIndex >= 0)
             {
+                int row = movieDataGridView.CurrentCell.RowIndex;
                 string str = Properties.Settings.Default.DefaultConnection;
 
                 SqlConnection con = new SqlConnection
@@ -52,29 +54,69 @@ namespace _291Project
                     ConnectionString = str
                 };
                 con.Open();
-                SqlCommand cmd = new SqlCommand("select * from Movie", con);
-                SqlDataReader dr = cmd.ExecuteReader();
-                if (dr.HasRows)
-                {
-                    int i;
-                    for (i = 0; i <= e.RowIndex; i++)
-                    {
-                        dr.Read();
-                    }
-                    // Command to add movie to RentQueue table when button is pushed
-                    SqlCommand cmd2 = new SqlCommand("DECLARE @num int " +
+                SqlCommand cmd = new SqlCommand("DECLARE @num int " +
                         "SET @num = (select max(QueueNumber) as max " +
                         "from RentQueue where CID = 2) + 1 " +
                         "insert RentQueue(CID, MovieID, QueueNumber) " +
                         "values(@user, @MovieID, @num)", con);
-                    cmd2.Parameters.AddWithValue("@user", Program.CustomerID.ToString());
-                    cmd2.Parameters.AddWithValue("@MovieID", dr["MovieID"]);
-                    added.Text = dr["MovieName"] + " added to the queue.";
-                    dr.Close();
-                    cmd2.ExecuteNonQuery();
-                    added.Visible = true;
-                }
+                cmd.Parameters.AddWithValue("@user", Program.CustomerID.ToString());
+                cmd.Parameters.AddWithValue("@MovieID", movieDataGridView.Rows[e.RowIndex].Cells[0].Value);
+                added.Text = movieDataGridView.Rows[e.RowIndex].Cells[1].Value + " added to the queue.";
+                DataTable dt = new DataTable();
+                SqlCommand cmd2 = new SqlCommand("select MovieID, MovieName, NumCopies from Movie", con);
+                dt.Load(cmd.ExecuteReader());
+                dt.Load(cmd2.ExecuteReader());
+                movieDataGridView.DataSource = dt;
+                added.Visible = true;
             }
         }
+
+
+        private void filter_Click(object sender, EventArgs e)
+        {
+            string str = Properties.Settings.Default.DefaultConnection;
+
+            SqlConnection con = new SqlConnection
+            {
+                ConnectionString = str
+            };
+            con.Open();
+
+            SqlCommand cmd = new SqlCommand("select MovieID, MovieName, NumCopies " +
+                "from Movie as M, Genre as G where M.GID = G.GID and Genre like @genre and " +
+                "MovieName like @movie_contains and MovieID in (select A.ActorID from Actor as A, " +
+                "MoviesIn as MI where MI.ActorID = A.ActorID and A.FirstName like @actor_contains)", con);
+            if (!string.IsNullOrEmpty(select_genre.Text))
+            {
+                cmd.Parameters.AddWithValue("@genre", "%" + select_genre.Text + "%");
+            }
+            else
+            {
+                cmd.Parameters.AddWithValue("@genre", "%");
+            }
+
+            if (!string.IsNullOrEmpty(actor_contains.Text))
+            {
+                cmd.Parameters.AddWithValue("@actor_contains", "%" + actor_contains.Text + "%");
+            }
+            else
+            {
+                cmd.Parameters.AddWithValue("@actor_contains", "%");
+            }
+
+            if (!string.IsNullOrEmpty(movie_contains.Text)) {
+                cmd.Parameters.AddWithValue("@movie_contains", "%" + movie_contains.Text + "%");
+            }
+            else
+            {
+                cmd.Parameters.AddWithValue("@movie_contains", "%");
+            }
+ 
+            DataTable table = new DataTable();
+            table.Load(cmd.ExecuteReader());
+            movieDataGridView.DataSource = table;
+        }
+
+
     }
 }
