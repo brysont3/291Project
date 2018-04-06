@@ -47,5 +47,11 @@ namespace _291Project.Employee
             Customer.CurrentOrders currentOrders = new Customer.CurrentOrders();
             currentOrders.Show();
         }
+
+        private void PaymentButton_Click(object sender, EventArgs e)
+        {
+            Customer.Payment payment = new Customer.Payment();
+            payment.Show();
+        }
     }
 }
