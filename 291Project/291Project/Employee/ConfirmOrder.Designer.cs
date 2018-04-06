@@ -331,7 +331,7 @@
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(104, 64);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(230, 28);
+            this.comboBox1.Size = new System.Drawing.Size(135, 28);
             this.comboBox1.TabIndex = 15;
             this.comboBox1.ValueMember = "OrderID";
             // 

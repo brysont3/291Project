@@ -47,5 +47,11 @@ namespace _291Project.Employee
             Customer.CurrentOrders currentOrders = new Customer.CurrentOrders();
             currentOrders.Show();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Customer.OrderHistory orderHistory = new Customer.OrderHistory();
+            orderHistory.Show();
+        }
     }
 }

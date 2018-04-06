@@ -97,7 +97,7 @@
             // cIDLabel
             // 
             cIDLabel.AutoSize = true;
-            cIDLabel.Location = new System.Drawing.Point(37, 43);
+            cIDLabel.Location = new System.Drawing.Point(369, 40);
             cIDLabel.Name = "cIDLabel";
             cIDLabel.Size = new System.Drawing.Size(41, 20);
             cIDLabel.TabIndex = 12;
@@ -332,8 +332,9 @@
             // cIDTextBox
             // 
             this.cIDTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.orderBindingSource, "CID", true));
-            this.cIDTextBox.Location = new System.Drawing.Point(84, 37);
+            this.cIDTextBox.Location = new System.Drawing.Point(416, 34);
             this.cIDTextBox.Name = "cIDTextBox";
+            this.cIDTextBox.ReadOnly = true;
             this.cIDTextBox.Size = new System.Drawing.Size(100, 26);
             this.cIDTextBox.TabIndex = 13;
             this.cIDTextBox.TextChanged += new System.EventHandler(this.cIDTextBox_TextChanged);
