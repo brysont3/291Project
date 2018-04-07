@@ -33,6 +33,7 @@
             this.MovieSuggestionButton = new System.Windows.Forms.Button();
             this.edit_info = new System.Windows.Forms.Button();
             this.view_movies = new System.Windows.Forms.Button();
+            this.queue = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // CreateOrder
@@ -48,7 +49,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(304, 247);
+            this.button2.Location = new System.Drawing.Point(311, 289);
             this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(50, 22);
@@ -89,11 +90,23 @@
             this.view_movies.UseVisualStyleBackColor = true;
             this.view_movies.Click += new System.EventHandler(this.view_movies_Click);
             // 
+            // queue
+            // 
+            this.queue.Location = new System.Drawing.Point(49, 235);
+            this.queue.Margin = new System.Windows.Forms.Padding(2);
+            this.queue.Name = "queue";
+            this.queue.Size = new System.Drawing.Size(100, 49);
+            this.queue.TabIndex = 5;
+            this.queue.Text = "View Queue";
+            this.queue.UseVisualStyleBackColor = true;
+            this.queue.Click += new System.EventHandler(this.queue_Click);
+            // 
             // CustomerMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(372, 277);
+            this.ClientSize = new System.Drawing.Size(372, 340);
+            this.Controls.Add(this.queue);
             this.Controls.Add(this.view_movies);
             this.Controls.Add(this.edit_info);
             this.Controls.Add(this.MovieSuggestionButton);
@@ -113,5 +126,6 @@
         private System.Windows.Forms.Button MovieSuggestionButton;
         private System.Windows.Forms.Button edit_info;
         private System.Windows.Forms.Button view_movies;
+        private System.Windows.Forms.Button queue;
     }
 }

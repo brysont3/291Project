@@ -30,8 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.dataSet1 = new _291Project.dataSet1();
             this.customerBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataSet1 = new _291Project.dataSet1();
             this.customerTableAdapter = new _291Project.dataSet1TableAdapters.CustomerTableAdapter();
             this.accountInfoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.accountInfoTableAdapter = new _291Project.dataSet1TableAdapters.AccountInfoTableAdapter();
@@ -43,8 +43,8 @@
             this.telephoneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.accountInfoBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -65,18 +65,19 @@
             this.dataGridView1.DataSource = this.customerBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(12, 12);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(747, 666);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // dataSet1
-            // 
-            this.dataSet1.DataSetName = "dataSet1";
-            this.dataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // customerBindingSource
             // 
             this.customerBindingSource.DataMember = "Customer";
             this.customerBindingSource.DataSource = this.dataSet1;
+            // 
+            // dataSet1
+            // 
+            this.dataSet1.DataSetName = "dataSet1";
+            this.dataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // customerTableAdapter
             // 
@@ -94,44 +95,51 @@
             // firstNameDataGridViewTextBoxColumn
             // 
             this.firstNameDataGridViewTextBoxColumn.DataPropertyName = "FirstName";
-            this.firstNameDataGridViewTextBoxColumn.HeaderText = "FirstName";
+            this.firstNameDataGridViewTextBoxColumn.HeaderText = "First Name";
             this.firstNameDataGridViewTextBoxColumn.Name = "firstNameDataGridViewTextBoxColumn";
+            this.firstNameDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // lastNameDataGridViewTextBoxColumn
             // 
             this.lastNameDataGridViewTextBoxColumn.DataPropertyName = "LastName";
-            this.lastNameDataGridViewTextBoxColumn.HeaderText = "LastName";
+            this.lastNameDataGridViewTextBoxColumn.HeaderText = "Last Name";
             this.lastNameDataGridViewTextBoxColumn.Name = "lastNameDataGridViewTextBoxColumn";
+            this.lastNameDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // cityDataGridViewTextBoxColumn
             // 
             this.cityDataGridViewTextBoxColumn.DataPropertyName = "City";
             this.cityDataGridViewTextBoxColumn.HeaderText = "City";
             this.cityDataGridViewTextBoxColumn.Name = "cityDataGridViewTextBoxColumn";
+            this.cityDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // stateDataGridViewTextBoxColumn
             // 
             this.stateDataGridViewTextBoxColumn.DataPropertyName = "State";
             this.stateDataGridViewTextBoxColumn.HeaderText = "State";
             this.stateDataGridViewTextBoxColumn.Name = "stateDataGridViewTextBoxColumn";
+            this.stateDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // zipCodeDataGridViewTextBoxColumn
             // 
             this.zipCodeDataGridViewTextBoxColumn.DataPropertyName = "ZipCode";
-            this.zipCodeDataGridViewTextBoxColumn.HeaderText = "ZipCode";
+            this.zipCodeDataGridViewTextBoxColumn.HeaderText = "Zipcode";
             this.zipCodeDataGridViewTextBoxColumn.Name = "zipCodeDataGridViewTextBoxColumn";
+            this.zipCodeDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // telephoneDataGridViewTextBoxColumn
             // 
             this.telephoneDataGridViewTextBoxColumn.DataPropertyName = "Telephone";
             this.telephoneDataGridViewTextBoxColumn.HeaderText = "Telephone";
             this.telephoneDataGridViewTextBoxColumn.Name = "telephoneDataGridViewTextBoxColumn";
+            this.telephoneDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // emailDataGridViewTextBoxColumn
             // 
             this.emailDataGridViewTextBoxColumn.DataPropertyName = "Email";
             this.emailDataGridViewTextBoxColumn.HeaderText = "Email";
             this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
+            this.emailDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // MailingList
             // 
@@ -143,8 +151,8 @@
             this.Text = "MailingList";
             this.Load += new System.EventHandler(this.MailingList_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.accountInfoBindingSource)).EndInit();
             this.ResumeLayout(false);
 

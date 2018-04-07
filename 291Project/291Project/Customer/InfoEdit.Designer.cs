@@ -30,11 +30,11 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.customerBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.paymentBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataSet1 = new _291Project.dataSet1();
+            this.customerBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.Update_info = new System.Windows.Forms.Button();
             this.customerTableAdapter = new _291Project.dataSet1TableAdapters.CustomerTableAdapter();
-            this.paymentBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.paymentTableAdapter = new _291Project.dataSet1TableAdapters.PaymentTableAdapter();
             this.firstNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lastNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -45,11 +45,11 @@
             this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.passwordDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.creditCardDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.AccountType = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.AccountType = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.paymentBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -75,19 +75,24 @@
             this.dataGridView1.Size = new System.Drawing.Size(1048, 112);
             this.dataGridView1.TabIndex = 0;
             // 
-            // customerBindingSource
+            // paymentBindingSource
             // 
-            this.customerBindingSource.DataMember = "Customer";
-            this.customerBindingSource.DataSource = this.dataSet1;
+            this.paymentBindingSource.DataMember = "Payment";
+            this.paymentBindingSource.DataSource = this.dataSet1;
             // 
             // dataSet1
             // 
             this.dataSet1.DataSetName = "dataSet1";
             this.dataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
+            // customerBindingSource
+            // 
+            this.customerBindingSource.DataMember = "Customer";
+            this.customerBindingSource.DataSource = this.dataSet1;
+            // 
             // Update_info
             // 
-            this.Update_info.Location = new System.Drawing.Point(432, 278);
+            this.Update_info.Location = new System.Drawing.Point(417, 276);
             this.Update_info.Name = "Update_info";
             this.Update_info.Size = new System.Drawing.Size(214, 74);
             this.Update_info.TabIndex = 1;
@@ -99,11 +104,6 @@
             // 
             this.customerTableAdapter.ClearBeforeFill = true;
             // 
-            // paymentBindingSource
-            // 
-            this.paymentBindingSource.DataMember = "Payment";
-            this.paymentBindingSource.DataSource = this.dataSet1;
-            // 
             // paymentTableAdapter
             // 
             this.paymentTableAdapter.ClearBeforeFill = true;
@@ -111,13 +111,13 @@
             // firstNameDataGridViewTextBoxColumn
             // 
             this.firstNameDataGridViewTextBoxColumn.DataPropertyName = "FirstName";
-            this.firstNameDataGridViewTextBoxColumn.HeaderText = "FirstName";
+            this.firstNameDataGridViewTextBoxColumn.HeaderText = "First Name";
             this.firstNameDataGridViewTextBoxColumn.Name = "firstNameDataGridViewTextBoxColumn";
             // 
             // lastNameDataGridViewTextBoxColumn
             // 
             this.lastNameDataGridViewTextBoxColumn.DataPropertyName = "LastName";
-            this.lastNameDataGridViewTextBoxColumn.HeaderText = "LastName";
+            this.lastNameDataGridViewTextBoxColumn.HeaderText = "Last Name";
             this.lastNameDataGridViewTextBoxColumn.Name = "lastNameDataGridViewTextBoxColumn";
             // 
             // cityDataGridViewTextBoxColumn
@@ -135,7 +135,7 @@
             // zipCodeDataGridViewTextBoxColumn
             // 
             this.zipCodeDataGridViewTextBoxColumn.DataPropertyName = "ZipCode";
-            this.zipCodeDataGridViewTextBoxColumn.HeaderText = "ZipCode";
+            this.zipCodeDataGridViewTextBoxColumn.HeaderText = "Zipcode";
             this.zipCodeDataGridViewTextBoxColumn.Name = "zipCodeDataGridViewTextBoxColumn";
             // 
             // telephoneDataGridViewTextBoxColumn
@@ -159,34 +159,30 @@
             // creditCardDataGridViewTextBoxColumn
             // 
             this.creditCardDataGridViewTextBoxColumn.DataPropertyName = "CreditCard";
-            this.creditCardDataGridViewTextBoxColumn.HeaderText = "CreditCard";
+            this.creditCardDataGridViewTextBoxColumn.HeaderText = "Credit Card Number";
             this.creditCardDataGridViewTextBoxColumn.Name = "creditCardDataGridViewTextBoxColumn";
             // 
             // AccountType
             // 
             this.AccountType.DataPropertyName = "AccountType";
-            this.AccountType.DataSource = this.paymentBindingSource;
-            this.AccountType.DisplayMember = "AccountType";
-            this.AccountType.HeaderText = "AccountType";
+            this.AccountType.HeaderText = "Account Type";
             this.AccountType.Name = "AccountType";
             this.AccountType.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.AccountType.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.AccountType.ValueMember = "AccountType";
             // 
             // InfoEdit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1119, 387);
+            this.ClientSize = new System.Drawing.Size(1069, 387);
             this.Controls.Add(this.Update_info);
             this.Controls.Add(this.dataGridView1);
             this.Name = "InfoEdit";
             this.Text = "InfoEdit";
             this.Load += new System.EventHandler(this.InfoEdit_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.paymentBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -209,6 +205,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn emailDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn passwordDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn creditCardDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewComboBoxColumn AccountType;
+        private System.Windows.Forms.DataGridViewTextBoxColumn AccountType;
     }
 }

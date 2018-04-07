@@ -56,7 +56,7 @@ namespace _291Project
                 con.Open();
                 SqlCommand cmd = new SqlCommand("DECLARE @num int " +
                         "SET @num = (select max(QueueNumber) as max " +
-                        "from RentQueue where CID = 2) + 1 " +
+                        "from RentQueue where CID = @user) + 1 " +
                         "insert RentQueue(CID, MovieID, QueueNumber) " +
                         "values(@user, @MovieID, @num)", con);
                 cmd.Parameters.AddWithValue("@user", Program.CustomerID.ToString());
@@ -66,7 +66,7 @@ namespace _291Project
                 {
                     added.Text = movieDataGridView.Rows[e.RowIndex].Cells[1].Value + " added to the queue.";
                     DataTable dt = new DataTable();
-                    SqlCommand cmd2 = new SqlCommand("select MovieID, MovieName, NumCopies from Movie", con);
+                    SqlCommand cmd2 = new SqlCommand("select MovieID, MovieName, NumCopies from dbo.Movie", con);
                     dt.Load(cmd.ExecuteReader());
                     dt.Load(cmd2.ExecuteReader());
                     movieDataGridView.DataSource = dt;
@@ -95,7 +95,7 @@ namespace _291Project
             SqlCommand cmd = new SqlCommand("select MovieID, MovieName, NumCopies " +
                 "from Movie as M, Genre as G where M.GID = G.GID and Genre like @genre and " +
                 "MovieName like @movie_contains and MovieID in (select A.ActorID from Actor as A, " +
-                "MoviesIn as MI where MI.ActorID = A.ActorID and A.FirstName like @actor_contains)", con);
+                "MoviesIn as MI where MI.ActorID = A.ActorID and (A.FirstName like @actor_contains or A.LastName like @actor_contains))", con);
             if (!string.IsNullOrEmpty(select_genre.Text))
             {
                 cmd.Parameters.AddWithValue("@genre", "%" + select_genre.Text + "%");

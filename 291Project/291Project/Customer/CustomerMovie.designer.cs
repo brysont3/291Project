@@ -101,7 +101,7 @@
             this.dataGridViewTextBoxColumn5,
             this.Queue});
             this.movieDataGridView.DataSource = this.movieBindingSource;
-            this.movieDataGridView.Location = new System.Drawing.Point(12, 53);
+            this.movieDataGridView.Location = new System.Drawing.Point(12, 76);
             this.movieDataGridView.MultiSelect = false;
             this.movieDataGridView.Name = "movieDataGridView";
             this.movieDataGridView.ReadOnly = true;
@@ -158,9 +158,9 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(198, 19);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(79, 13);
+            this.label2.Size = new System.Drawing.Size(66, 13);
             this.label2.TabIndex = 5;
-            this.label2.Text = "Actor Contains:";
+            this.label2.Text = "Actor Name:";
             // 
             // actorBindingSource
             // 
@@ -173,7 +173,7 @@
             // 
             // movie_contains
             // 
-            this.movie_contains.Location = new System.Drawing.Point(521, 17);
+            this.movie_contains.Location = new System.Drawing.Point(503, 17);
             this.movie_contains.Name = "movie_contains";
             this.movie_contains.Size = new System.Drawing.Size(138, 20);
             this.movie_contains.TabIndex = 7;
@@ -181,11 +181,11 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(435, 19);
+            this.label3.Location = new System.Drawing.Point(427, 20);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(80, 13);
+            this.label3.Size = new System.Drawing.Size(70, 13);
             this.label3.TabIndex = 8;
-            this.label3.Text = "Movie Contains";
+            this.label3.Text = "Movie Name:";
             // 
             // filter
             // 
@@ -199,7 +199,7 @@
             // 
             // actor_contains
             // 
-            this.actor_contains.Location = new System.Drawing.Point(283, 17);
+            this.actor_contains.Location = new System.Drawing.Point(270, 17);
             this.actor_contains.Name = "actor_contains";
             this.actor_contains.Size = new System.Drawing.Size(134, 20);
             this.actor_contains.TabIndex = 10;
@@ -225,7 +225,7 @@
             // 
             this.dataGridViewTextBoxColumn5.DataPropertyName = "NumCopies";
             this.dataGridViewTextBoxColumn5.FillWeight = 125F;
-            this.dataGridViewTextBoxColumn5.HeaderText = "Copies Remaining";
+            this.dataGridViewTextBoxColumn5.HeaderText = "Total Copies";
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
             this.dataGridViewTextBoxColumn5.ReadOnly = true;
             this.dataGridViewTextBoxColumn5.Width = 250;
