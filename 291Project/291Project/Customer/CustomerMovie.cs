@@ -36,6 +36,7 @@ namespace _291Project
             this.genreTableAdapter.Fill(this.dataSet1.Genre);
             // TODO: This line of code loads data into the 'dataSet1.Movie' table. You can move, or remove it, as needed.
             this.movieTableAdapter.Fill(this.dataSet1.Movie);
+            this.select_genre.SelectedIndex = -1;
 
         }
 
@@ -46,7 +47,6 @@ namespace _291Project
             if (senderGrid.Columns[e.ColumnIndex] is DataGridViewButtonColumn &&
                 e.RowIndex >= 0)
             {
-                int row = movieDataGridView.CurrentCell.RowIndex;
                 string str = Properties.Settings.Default.DefaultConnection;
 
                 SqlConnection con = new SqlConnection
@@ -61,13 +61,23 @@ namespace _291Project
                         "values(@user, @MovieID, @num)", con);
                 cmd.Parameters.AddWithValue("@user", Program.CustomerID.ToString());
                 cmd.Parameters.AddWithValue("@MovieID", movieDataGridView.Rows[e.RowIndex].Cells[0].Value);
-                added.Text = movieDataGridView.Rows[e.RowIndex].Cells[1].Value + " added to the queue.";
-                DataTable dt = new DataTable();
-                SqlCommand cmd2 = new SqlCommand("select MovieID, MovieName, NumCopies from Movie", con);
-                dt.Load(cmd.ExecuteReader());
-                dt.Load(cmd2.ExecuteReader());
-                movieDataGridView.DataSource = dt;
-                added.Visible = true;
+
+                try
+                {
+                    added.Text = movieDataGridView.Rows[e.RowIndex].Cells[1].Value + " added to the queue.";
+                    DataTable dt = new DataTable();
+                    SqlCommand cmd2 = new SqlCommand("select MovieID, MovieName, NumCopies from Movie", con);
+                    dt.Load(cmd.ExecuteReader());
+                    dt.Load(cmd2.ExecuteReader());
+                    movieDataGridView.DataSource = dt;
+                    added.Visible = true;
+                }
+                catch (System.Data.SqlClient.SqlException)
+                {
+                    added.Text = movieDataGridView.Rows[e.RowIndex].Cells[1].Value + " already in the queue!";
+                    added.Visible = true;
+                    con.Close();
+                }
             }
         }
 

@@ -32,8 +32,10 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.customerBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataSet1 = new _291Project.dataSet1();
-            this.update_info = new System.Windows.Forms.Button();
+            this.Update_info = new System.Windows.Forms.Button();
             this.customerTableAdapter = new _291Project.dataSet1TableAdapters.CustomerTableAdapter();
+            this.paymentBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.paymentTableAdapter = new _291Project.dataSet1TableAdapters.PaymentTableAdapter();
             this.firstNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lastNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -43,10 +45,11 @@
             this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.passwordDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.creditCardDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.AccountType = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.AccountType = new System.Windows.Forms.DataGridViewComboBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.paymentBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -82,19 +85,28 @@
             this.dataSet1.DataSetName = "dataSet1";
             this.dataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // update_info
+            // Update_info
             // 
-            this.update_info.Location = new System.Drawing.Point(432, 278);
-            this.update_info.Name = "update_info";
-            this.update_info.Size = new System.Drawing.Size(214, 74);
-            this.update_info.TabIndex = 1;
-            this.update_info.Text = "Update all Info";
-            this.update_info.UseVisualStyleBackColor = true;
-            this.update_info.Click += new System.EventHandler(this.update_info_Click);
+            this.Update_info.Location = new System.Drawing.Point(432, 278);
+            this.Update_info.Name = "Update_info";
+            this.Update_info.Size = new System.Drawing.Size(214, 74);
+            this.Update_info.TabIndex = 1;
+            this.Update_info.Text = "Update all Info";
+            this.Update_info.UseVisualStyleBackColor = true;
+            this.Update_info.Click += new System.EventHandler(this.Update_info_Click_1);
             // 
             // customerTableAdapter
             // 
             this.customerTableAdapter.ClearBeforeFill = true;
+            // 
+            // paymentBindingSource
+            // 
+            this.paymentBindingSource.DataMember = "Payment";
+            this.paymentBindingSource.DataSource = this.dataSet1;
+            // 
+            // paymentTableAdapter
+            // 
+            this.paymentTableAdapter.ClearBeforeFill = true;
             // 
             // firstNameDataGridViewTextBoxColumn
             // 
@@ -153,15 +165,20 @@
             // AccountType
             // 
             this.AccountType.DataPropertyName = "AccountType";
+            this.AccountType.DataSource = this.paymentBindingSource;
+            this.AccountType.DisplayMember = "AccountType";
             this.AccountType.HeaderText = "AccountType";
             this.AccountType.Name = "AccountType";
+            this.AccountType.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.AccountType.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.AccountType.ValueMember = "AccountType";
             // 
             // InfoEdit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1119, 387);
-            this.Controls.Add(this.update_info);
+            this.Controls.Add(this.Update_info);
             this.Controls.Add(this.dataGridView1);
             this.Name = "InfoEdit";
             this.Text = "InfoEdit";
@@ -169,6 +186,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.paymentBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -179,7 +197,9 @@
         private dataSet1 dataSet1;
         private System.Windows.Forms.BindingSource customerBindingSource;
         private dataSet1TableAdapters.CustomerTableAdapter customerTableAdapter;
-        private System.Windows.Forms.Button update_info;
+        private System.Windows.Forms.Button Update_info;
+        private System.Windows.Forms.BindingSource paymentBindingSource;
+        private dataSet1TableAdapters.PaymentTableAdapter paymentTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn firstNameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn lastNameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn cityDataGridViewTextBoxColumn;
@@ -189,6 +209,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn emailDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn passwordDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn creditCardDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn AccountType;
+        private System.Windows.Forms.DataGridViewComboBoxColumn AccountType;
     }
 }
