@@ -77,5 +77,12 @@ namespace _291Project.Employee
             Customer.RemoveQueue queue = new Customer.RemoveQueue();
             queue.Show();
         }
+        
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Customer.RateMovie rateMovie = new Customer.RateMovie();
+            rateMovie.Show();
+        }
     }
 }
+

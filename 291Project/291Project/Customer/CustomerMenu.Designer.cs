@@ -38,6 +38,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.PaymentButton = new System.Windows.Forms.Button();
             this.OrderHistoryButton = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // CreateOrder
@@ -162,6 +163,17 @@
             this.Name = "CustomerMenu";
             this.Text = "CustomerMenu";
             this.ResumeLayout(false);
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(74, 415);
+            this.button3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(150, 71);
+            this.button3.TabIndex = 7;
+            this.button3.Text = "Rate a Movie";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
 
         }
 
@@ -178,5 +190,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button PaymentButton;
         private System.Windows.Forms.Button OrderHistoryButton;
+        private System.Windows.Forms.Button button3;
     }
 }
