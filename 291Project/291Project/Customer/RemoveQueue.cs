@@ -29,7 +29,7 @@ namespace _291Project.Customer
             };
             con.Open();
 
-            SqlCommand cmd = new SqlCommand("SELECT MovieID, QueueNumber FROM dbo.RentQueue WHERE(CID = @user)", con);
+            SqlCommand cmd = new SqlCommand("SELECT M.MovieID, M.MovieName, RQ.QueueNumber FROM dbo.Movie as M, dbo.RentQueue as RQ WHERE RQ.CID = @user and M.MovieID = RQ.MovieID", con);
             cmd.Parameters.AddWithValue("@user", Program.CustomerID.ToString());
             DataTable dt = new DataTable();
             dt.Load(cmd.ExecuteReader());
@@ -58,7 +58,7 @@ namespace _291Project.Customer
                 con.Open();
                 SqlCommand cmd = new SqlCommand("Delete from dbo.RentQueue where CID = @user and MovieID = @movie", con);
                 cmd.Parameters.AddWithValue("@user", Program.CustomerID.ToString());
-                cmd.Parameters.AddWithValue("@movie", dataGridView1.Rows[e.RowIndex].Cells[0].Value);
+                cmd.Parameters.AddWithValue("@movie", dataGridView1.Rows[e.RowIndex].Cells[1].Value);
                 DataTable dt = new DataTable();
                 dt.Load(cmd.ExecuteReader());
                 dataGridView1.DataSource = dt;

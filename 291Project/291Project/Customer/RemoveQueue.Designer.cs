@@ -35,8 +35,6 @@
             this.rentQueueTableAdapter = new _291Project.dataSet1TableAdapters.RentQueueTableAdapter();
             this.movieBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.movieTableAdapter = new _291Project.dataSet1TableAdapters.MovieTableAdapter();
-            this.movieIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.QueueNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Delete = new System.Windows.Forms.DataGridViewButtonColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rentQueueBindingSource)).BeginInit();
@@ -48,13 +46,9 @@
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.movieIDDataGridViewTextBoxColumn,
-            this.QueueNumber,
             this.Delete});
-            this.dataGridView1.DataSource = this.rentQueueBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(12, 12);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
@@ -84,22 +78,6 @@
             // movieTableAdapter
             // 
             this.movieTableAdapter.ClearBeforeFill = true;
-            // 
-            // movieIDDataGridViewTextBoxColumn
-            // 
-            this.movieIDDataGridViewTextBoxColumn.DataPropertyName = "MovieID";
-            this.movieIDDataGridViewTextBoxColumn.HeaderText = "Movie";
-            this.movieIDDataGridViewTextBoxColumn.Name = "movieIDDataGridViewTextBoxColumn";
-            this.movieIDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.movieIDDataGridViewTextBoxColumn.Width = 200;
-            // 
-            // QueueNumber
-            // 
-            this.QueueNumber.DataPropertyName = "QueueNumber";
-            this.QueueNumber.HeaderText = "Queue Number";
-            this.QueueNumber.Name = "QueueNumber";
-            this.QueueNumber.ReadOnly = true;
-            this.QueueNumber.Width = 200;
             // 
             // Delete
             // 
@@ -135,8 +113,6 @@
         private dataSet1TableAdapters.RentQueueTableAdapter rentQueueTableAdapter;
         private System.Windows.Forms.BindingSource movieBindingSource;
         private dataSet1TableAdapters.MovieTableAdapter movieTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn movieIDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn QueueNumber;
         private System.Windows.Forms.DataGridViewButtonColumn Delete;
     }
 }

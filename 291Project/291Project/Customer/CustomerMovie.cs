@@ -37,8 +37,8 @@ namespace _291Project
             // TODO: This line of code loads data into the 'dataSet1.Movie' table. You can move, or remove it, as needed.
             this.movieTableAdapter.Fill(this.dataSet1.Movie);
             this.select_genre.SelectedIndex = -1;
-
         }
+
 
         private void movieDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {

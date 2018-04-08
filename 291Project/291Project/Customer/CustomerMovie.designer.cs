@@ -34,6 +34,10 @@
             this.movieTableAdapter = new _291Project.dataSet1TableAdapters.MovieTableAdapter();
             this.tableAdapterManager = new _291Project.dataSet1TableAdapters.TableAdapterManager();
             this.movieDataGridView = new System.Windows.Forms.DataGridView();
+            this.MovieID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Queue = new System.Windows.Forms.DataGridViewButtonColumn();
             this.added = new System.Windows.Forms.Label();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.genreTableAdapter = new _291Project.dataSet1TableAdapters.GenreTableAdapter();
@@ -47,10 +51,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.filter = new System.Windows.Forms.Button();
             this.actor_contains = new System.Windows.Forms.TextBox();
-            this.MovieID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Queue = new System.Windows.Forms.DataGridViewButtonColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.movieBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.movieDataGridView)).BeginInit();
@@ -101,13 +101,49 @@
             this.dataGridViewTextBoxColumn5,
             this.Queue});
             this.movieDataGridView.DataSource = this.movieBindingSource;
-            this.movieDataGridView.Location = new System.Drawing.Point(12, 76);
+            this.movieDataGridView.Location = new System.Drawing.Point(12, 60);
             this.movieDataGridView.MultiSelect = false;
             this.movieDataGridView.Name = "movieDataGridView";
             this.movieDataGridView.ReadOnly = true;
             this.movieDataGridView.Size = new System.Drawing.Size(756, 510);
             this.movieDataGridView.TabIndex = 1;
             this.movieDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.movieDataGridView_CellContentClick);
+            // 
+            // MovieID
+            // 
+            this.MovieID.DataPropertyName = "MovieID";
+            this.MovieID.HeaderText = "MovieID";
+            this.MovieID.Name = "MovieID";
+            this.MovieID.ReadOnly = true;
+            this.MovieID.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "MovieName";
+            this.dataGridViewTextBoxColumn2.FillWeight = 125F;
+            this.dataGridViewTextBoxColumn2.HeaderText = "Movie Name";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            this.dataGridViewTextBoxColumn2.Width = 250;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "NumCopies";
+            this.dataGridViewTextBoxColumn5.FillWeight = 125F;
+            this.dataGridViewTextBoxColumn5.HeaderText = "Total Copies";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.ReadOnly = true;
+            this.dataGridViewTextBoxColumn5.Width = 250;
+            // 
+            // Queue
+            // 
+            this.Queue.HeaderText = "Queue";
+            this.Queue.Name = "Queue";
+            this.Queue.ReadOnly = true;
+            this.Queue.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Queue.Text = "Add to Queue";
+            this.Queue.UseColumnTextForButtonValue = true;
+            this.Queue.Width = 200;
             // 
             // added
             // 
@@ -203,42 +239,6 @@
             this.actor_contains.Name = "actor_contains";
             this.actor_contains.Size = new System.Drawing.Size(134, 20);
             this.actor_contains.TabIndex = 10;
-            // 
-            // MovieID
-            // 
-            this.MovieID.DataPropertyName = "MovieID";
-            this.MovieID.HeaderText = "MovieID";
-            this.MovieID.Name = "MovieID";
-            this.MovieID.ReadOnly = true;
-            this.MovieID.Visible = false;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "MovieName";
-            this.dataGridViewTextBoxColumn2.FillWeight = 125F;
-            this.dataGridViewTextBoxColumn2.HeaderText = "Movie Name";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            this.dataGridViewTextBoxColumn2.Width = 250;
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "NumCopies";
-            this.dataGridViewTextBoxColumn5.FillWeight = 125F;
-            this.dataGridViewTextBoxColumn5.HeaderText = "Total Copies";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.ReadOnly = true;
-            this.dataGridViewTextBoxColumn5.Width = 250;
-            // 
-            // Queue
-            // 
-            this.Queue.HeaderText = "Queue";
-            this.Queue.Name = "Queue";
-            this.Queue.ReadOnly = true;
-            this.Queue.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Queue.Text = "Add to Queue";
-            this.Queue.UseColumnTextForButtonValue = true;
-            this.Queue.Width = 200;
             // 
             // CustomerMovie
             // 
