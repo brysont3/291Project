@@ -138,7 +138,7 @@
             // 
             this.orderBindingSource.DataMember = "Order";
             this.orderBindingSource.DataSource = this.dataSet1;
-            this.orderBindingSource.Filter = "ReturnDate IS NULL AND EID IS NOT NULL AND CID = 0";
+            this.orderBindingSource.Filter = "ReturnDate IS NULL AND EID IS NOT NULL AND CID = 0" + Program.CustomerID.ToString();
             this.orderBindingSource.CurrentChanged += new System.EventHandler(this.orderBindingSource_CurrentChanged);
             // 
             // orderTableAdapter
