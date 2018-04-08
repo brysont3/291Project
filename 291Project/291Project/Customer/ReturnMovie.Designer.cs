@@ -1,6 +1,6 @@
-﻿namespace _291Project.Employee
+﻿namespace _291Project.Customer
 {
-    partial class ConfirmOrder
+    partial class ReturnMovie
     {
         /// <summary>
         /// Required designer variable.
@@ -31,10 +31,11 @@
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.Label orderIDLabel;
             System.Windows.Forms.Label orderDateLabel;
+            System.Windows.Forms.Label returnDateLabel;
             System.Windows.Forms.Label movieIDLabel;
             System.Windows.Forms.Label cIDLabel;
             System.Windows.Forms.Label eIDLabel;
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ConfirmOrder));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ReturnMovie));
             this.dataSet1 = new _291Project.dataSet1();
             this.orderBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.orderTableAdapter = new _291Project.dataSet1TableAdapters.OrderTableAdapter();
@@ -54,14 +55,17 @@
             this.orderBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.orderIDTextBox = new System.Windows.Forms.TextBox();
             this.orderDateDateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.returnDateDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.movieIDTextBox = new System.Windows.Forms.TextBox();
             this.cIDTextBox = new System.Windows.Forms.TextBox();
             this.eIDTextBox = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.ReturnMovieButton = new System.Windows.Forms.Button();
+            this.CancelButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             orderIDLabel = new System.Windows.Forms.Label();
             orderDateLabel = new System.Windows.Forms.Label();
+            returnDateLabel = new System.Windows.Forms.Label();
             movieIDLabel = new System.Windows.Forms.Label();
             cIDLabel = new System.Windows.Forms.Label();
             eIDLabel = new System.Windows.Forms.Label();
@@ -74,7 +78,7 @@
             // orderIDLabel
             // 
             orderIDLabel.AutoSize = true;
-            orderIDLabel.Location = new System.Drawing.Point(27, 135);
+            orderIDLabel.Location = new System.Drawing.Point(91, 155);
             orderIDLabel.Name = "orderIDLabel";
             orderIDLabel.Size = new System.Drawing.Size(74, 20);
             orderIDLabel.TabIndex = 1;
@@ -83,16 +87,25 @@
             // orderDateLabel
             // 
             orderDateLabel.AutoSize = true;
-            orderDateLabel.Location = new System.Drawing.Point(27, 168);
+            orderDateLabel.Location = new System.Drawing.Point(91, 188);
             orderDateLabel.Name = "orderDateLabel";
             orderDateLabel.Size = new System.Drawing.Size(92, 20);
             orderDateLabel.TabIndex = 3;
             orderDateLabel.Text = "Order Date:";
             // 
+            // returnDateLabel
+            // 
+            returnDateLabel.AutoSize = true;
+            returnDateLabel.Location = new System.Drawing.Point(91, 220);
+            returnDateLabel.Name = "returnDateLabel";
+            returnDateLabel.Size = new System.Drawing.Size(101, 20);
+            returnDateLabel.TabIndex = 5;
+            returnDateLabel.Text = "Return Date:";
+            // 
             // movieIDLabel
             // 
             movieIDLabel.AutoSize = true;
-            movieIDLabel.Location = new System.Drawing.Point(27, 199);
+            movieIDLabel.Location = new System.Drawing.Point(91, 251);
             movieIDLabel.Name = "movieIDLabel";
             movieIDLabel.Size = new System.Drawing.Size(75, 20);
             movieIDLabel.TabIndex = 7;
@@ -101,7 +114,7 @@
             // cIDLabel
             // 
             cIDLabel.AutoSize = true;
-            cIDLabel.Location = new System.Drawing.Point(27, 231);
+            cIDLabel.Location = new System.Drawing.Point(91, 283);
             cIDLabel.Name = "cIDLabel";
             cIDLabel.Size = new System.Drawing.Size(41, 20);
             cIDLabel.TabIndex = 9;
@@ -110,7 +123,7 @@
             // eIDLabel
             // 
             eIDLabel.AutoSize = true;
-            eIDLabel.Location = new System.Drawing.Point(27, 263);
+            eIDLabel.Location = new System.Drawing.Point(91, 315);
             eIDLabel.Name = "eIDLabel";
             eIDLabel.Size = new System.Drawing.Size(41, 20);
             eIDLabel.TabIndex = 11;
@@ -123,10 +136,10 @@
             // 
             // orderBindingSource
             // 
-            this.orderBindingSource.AllowNew = false;
             this.orderBindingSource.DataMember = "Order";
             this.orderBindingSource.DataSource = this.dataSet1;
-            this.orderBindingSource.Filter = "EID IS NULL";
+            this.orderBindingSource.Filter = "ReturnDate IS NULL AND EID IS NOT NULL AND CID = 0";
+            this.orderBindingSource.CurrentChanged += new System.EventHandler(this.orderBindingSource_CurrentChanged);
             // 
             // orderTableAdapter
             // 
@@ -175,7 +188,7 @@
             this.orderBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.orderBindingNavigator.Name = "orderBindingNavigator";
             this.orderBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.orderBindingNavigator.Size = new System.Drawing.Size(640, 31);
+            this.orderBindingNavigator.Size = new System.Drawing.Size(715, 31);
             this.orderBindingNavigator.TabIndex = 0;
             this.orderBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -276,86 +289,110 @@
             // orderIDTextBox
             // 
             this.orderIDTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.orderBindingSource, "OrderID", true));
-            this.orderIDTextBox.Location = new System.Drawing.Point(134, 132);
+            this.orderIDTextBox.Location = new System.Drawing.Point(198, 152);
             this.orderIDTextBox.Name = "orderIDTextBox";
+            this.orderIDTextBox.ReadOnly = true;
             this.orderIDTextBox.Size = new System.Drawing.Size(200, 26);
             this.orderIDTextBox.TabIndex = 2;
             // 
             // orderDateDateTimePicker
             // 
             this.orderDateDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.orderBindingSource, "OrderDate", true));
-            this.orderDateDateTimePicker.Location = new System.Drawing.Point(134, 164);
+            this.orderDateDateTimePicker.Location = new System.Drawing.Point(198, 184);
             this.orderDateDateTimePicker.Name = "orderDateDateTimePicker";
             this.orderDateDateTimePicker.Size = new System.Drawing.Size(200, 26);
             this.orderDateDateTimePicker.TabIndex = 4;
             // 
+            // returnDateDateTimePicker
+            // 
+            this.returnDateDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.orderBindingSource, "ReturnDate", true));
+            this.returnDateDateTimePicker.Location = new System.Drawing.Point(198, 216);
+            this.returnDateDateTimePicker.Name = "returnDateDateTimePicker";
+            this.returnDateDateTimePicker.Size = new System.Drawing.Size(200, 26);
+            this.returnDateDateTimePicker.TabIndex = 6;
+            // 
             // movieIDTextBox
             // 
             this.movieIDTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.orderBindingSource, "MovieID", true));
-            this.movieIDTextBox.Location = new System.Drawing.Point(134, 196);
+            this.movieIDTextBox.Location = new System.Drawing.Point(198, 248);
             this.movieIDTextBox.Name = "movieIDTextBox";
+            this.movieIDTextBox.ReadOnly = true;
             this.movieIDTextBox.Size = new System.Drawing.Size(200, 26);
             this.movieIDTextBox.TabIndex = 8;
             // 
             // cIDTextBox
             // 
             this.cIDTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.orderBindingSource, "CID", true));
-            this.cIDTextBox.Location = new System.Drawing.Point(134, 228);
+            this.cIDTextBox.Location = new System.Drawing.Point(198, 280);
             this.cIDTextBox.Name = "cIDTextBox";
+            this.cIDTextBox.ReadOnly = true;
             this.cIDTextBox.Size = new System.Drawing.Size(200, 26);
             this.cIDTextBox.TabIndex = 10;
             // 
             // eIDTextBox
             // 
             this.eIDTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.orderBindingSource, "EID", true));
-            this.eIDTextBox.Location = new System.Drawing.Point(134, 260);
+            this.eIDTextBox.Location = new System.Drawing.Point(198, 312);
             this.eIDTextBox.Name = "eIDTextBox";
             this.eIDTextBox.ReadOnly = true;
             this.eIDTextBox.Size = new System.Drawing.Size(200, 26);
             this.eIDTextBox.TabIndex = 12;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(387, 168);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(181, 45);
-            this.button1.TabIndex = 13;
-            this.button1.Text = "Confirm Order";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // comboBox1
             // 
             this.comboBox1.DataSource = this.orderBindingSource;
             this.comboBox1.DisplayMember = "OrderID";
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(104, 64);
+            this.comboBox1.Location = new System.Drawing.Point(198, 75);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(230, 28);
-            this.comboBox1.TabIndex = 15;
+            this.comboBox1.Size = new System.Drawing.Size(200, 28);
+            this.comboBox1.TabIndex = 13;
             this.comboBox1.ValueMember = "OrderID";
+            // 
+            // ReturnMovieButton
+            // 
+            this.ReturnMovieButton.Location = new System.Drawing.Point(516, 152);
+            this.ReturnMovieButton.Name = "ReturnMovieButton";
+            this.ReturnMovieButton.Size = new System.Drawing.Size(143, 70);
+            this.ReturnMovieButton.TabIndex = 14;
+            this.ReturnMovieButton.Text = "Return Movie";
+            this.ReturnMovieButton.UseVisualStyleBackColor = true;
+            this.ReturnMovieButton.Click += new System.EventHandler(this.ReturnMovieButton_Click);
+            // 
+            // CancelButton
+            // 
+            this.CancelButton.Location = new System.Drawing.Point(516, 253);
+            this.CancelButton.Name = "CancelButton";
+            this.CancelButton.Size = new System.Drawing.Size(143, 80);
+            this.CancelButton.TabIndex = 15;
+            this.CancelButton.Text = "Cancel && Close";
+            this.CancelButton.UseVisualStyleBackColor = true;
+            this.CancelButton.Click += new System.EventHandler(this.CancelButton_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(24, 67);
+            this.label1.Location = new System.Drawing.Point(118, 83);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(74, 20);
-            this.label1.TabIndex = 17;
+            this.label1.TabIndex = 16;
             this.label1.Text = "Order ID:";
             // 
-            // ConfirmOrder
+            // ReturnMovie
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(640, 361);
+            this.ClientSize = new System.Drawing.Size(715, 405);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.CancelButton);
+            this.Controls.Add(this.ReturnMovieButton);
             this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.button1);
             this.Controls.Add(orderIDLabel);
             this.Controls.Add(this.orderIDTextBox);
             this.Controls.Add(orderDateLabel);
             this.Controls.Add(this.orderDateDateTimePicker);
+            this.Controls.Add(returnDateLabel);
+            this.Controls.Add(this.returnDateDateTimePicker);
             this.Controls.Add(movieIDLabel);
             this.Controls.Add(this.movieIDTextBox);
             this.Controls.Add(cIDLabel);
@@ -363,9 +400,9 @@
             this.Controls.Add(eIDLabel);
             this.Controls.Add(this.eIDTextBox);
             this.Controls.Add(this.orderBindingNavigator);
-            this.Name = "ConfirmOrder";
-            this.Text = "ConfirmOrder";
-            this.Load += new System.EventHandler(this.ConfirmOrder_Load);
+            this.Name = "ReturnMovie";
+            this.Text = "ReturnMovie";
+            this.Load += new System.EventHandler(this.ReturnMovie_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.orderBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.orderBindingNavigator)).EndInit();
@@ -397,11 +434,13 @@
         private System.Windows.Forms.ToolStripButton orderBindingNavigatorSaveItem;
         private System.Windows.Forms.TextBox orderIDTextBox;
         private System.Windows.Forms.DateTimePicker orderDateDateTimePicker;
+        private System.Windows.Forms.DateTimePicker returnDateDateTimePicker;
         private System.Windows.Forms.TextBox movieIDTextBox;
         private System.Windows.Forms.TextBox cIDTextBox;
         private System.Windows.Forms.TextBox eIDTextBox;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Button ReturnMovieButton;
+        private System.Windows.Forms.Button CancelButton;
         private System.Windows.Forms.Label label1;
     }
 }

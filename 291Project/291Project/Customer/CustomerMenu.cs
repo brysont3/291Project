@@ -36,6 +36,30 @@ namespace _291Project.Employee
             customerMovieSuggestions.Show();
         }
 
+        private void ReturnOrder_Click(object sender, EventArgs e)
+        {
+            Customer.ReturnMovie returnMovie = new Customer.ReturnMovie();
+            returnMovie.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Customer.CurrentOrders currentOrders = new Customer.CurrentOrders();
+            currentOrders.Show();
+        }
+
+        private void PaymentButton_Click(object sender, EventArgs e)
+        {
+            Customer.Payment payment = new Customer.Payment();
+            payment.Show();
+        }
+
+        private void OrderHistoryButton_Click(object sender, EventArgs e)
+        {
+            Customer.OrderHistory orderHistory = new Customer.OrderHistory();
+            orderHistory.Show();
+        }
+        
         private void edit_info_Click(object sender, EventArgs e)
         {
             Customer.InfoEdit info = new Customer.InfoEdit();
