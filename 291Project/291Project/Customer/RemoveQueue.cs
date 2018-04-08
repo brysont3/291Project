@@ -31,6 +31,7 @@ namespace _291Project.Customer
 
             SqlCommand cmd = new SqlCommand("SELECT M.MovieID, M.MovieName, RQ.QueueNumber FROM dbo.Movie as M, dbo.RentQueue as RQ WHERE RQ.CID = @user and M.MovieID = RQ.MovieID", con);
             cmd.Parameters.AddWithValue("@user", Program.CustomerID.ToString());
+
             DataTable dt = new DataTable();
             dt.Load(cmd.ExecuteReader());
             dataGridView1.DataSource = dt;
