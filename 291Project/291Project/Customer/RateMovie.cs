@@ -27,8 +27,6 @@ namespace _291Project.Customer
 
             oDA.Fill(oDT);
 
-            MessageBox.Show(oDT.Rows.Count.ToString());
-
             this.MovieComboBox.DataSource = oDT;
             this.MovieComboBox.DisplayMember = "MovieName";
             this.MovieComboBox.ValueMember = "MovieID";
@@ -49,6 +47,7 @@ namespace _291Project.Customer
                 System.Data.SqlClient.SqlCommand oCmd = new System.Data.SqlClient.SqlCommand(strSQL, oDA);
 
                 Int32 cnt = oCmd.ExecuteNonQuery();
+                MessageBox.Show("Movie Rated");
             }
             catch (System.Data.SqlClient.SqlException ex)
             {
