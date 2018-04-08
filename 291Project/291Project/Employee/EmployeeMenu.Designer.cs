@@ -35,6 +35,7 @@
             this.NewCustomerButton = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.MovieSuggestionButton = new System.Windows.Forms.Button();
+            this.mail_list = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -87,7 +88,7 @@
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(37, 119);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(119, 58);
             this.button1.TabIndex = 3;
@@ -105,11 +106,22 @@
             this.MovieSuggestionButton.UseVisualStyleBackColor = true;
             this.MovieSuggestionButton.Click += new System.EventHandler(this.MovieSuggestionButton_Click);
             // 
+            // mail_list
+            // 
+            this.mail_list.Location = new System.Drawing.Point(198, 47);
+            this.mail_list.Name = "mail_list";
+            this.mail_list.Size = new System.Drawing.Size(119, 54);
+            this.mail_list.TabIndex = 5;
+            this.mail_list.Text = "Customer Mailing List";
+            this.mail_list.UseVisualStyleBackColor = true;
+            this.mail_list.Click += new System.EventHandler(this.mail_list_Click);
+            // 
             // EmployeeMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(683, 501);
+            this.Controls.Add(this.mail_list);
             this.Controls.Add(this.MovieSuggestionButton);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.NewCustomerButton);
@@ -134,5 +146,6 @@
         private System.Windows.Forms.Button NewCustomerButton;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button MovieSuggestionButton;
+        private System.Windows.Forms.Button mail_list;
     }
 }

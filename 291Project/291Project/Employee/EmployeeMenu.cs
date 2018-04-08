@@ -47,5 +47,11 @@ namespace _291Project
             movieSuggestions.Show();
 
         }
+
+        private void mail_list_Click(object sender, EventArgs e)
+        {
+            MailingList list = new MailingList();
+            list.Show();
+        }
     }
 }

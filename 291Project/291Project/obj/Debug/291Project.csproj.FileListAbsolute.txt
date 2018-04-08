@@ -28,3 +28,33 @@ C:\Users\Robert Sullivan\Desktop\291Project\291Project\291Project\obj\Debug\291P
 C:\Users\Robert Sullivan\Desktop\291Project\291Project\291Project\obj\Debug\291Project.csproj.CoreCompileInputs.cache
 C:\Users\Robert Sullivan\Desktop\291Project\291Project\291Project\obj\Debug\291Project.exe
 C:\Users\Robert Sullivan\Desktop\291Project\291Project\291Project\obj\Debug\291Project.pdb
+F:\Tristan\Desktop\Coding\291\291Project\291Project\bin\Debug\291Project.exe.config
+F:\Tristan\Desktop\Coding\291\291Project\291Project\bin\Debug\291Project.exe
+F:\Tristan\Desktop\Coding\291\291Project\291Project\bin\Debug\291Project.pdb
+F:\Tristan\Desktop\Coding\291\291Project\291Project\obj\Debug\291Project.csprojResolveAssemblyReference.cache
+F:\Tristan\Desktop\Coding\291\291Project\291Project\obj\Debug\_291Project.Employee.CreateOrder.resources
+F:\Tristan\Desktop\Coding\291\291Project\291Project\obj\Debug\_291Project.Employee.CustomerMenu.resources
+F:\Tristan\Desktop\Coding\291\291Project\291Project\obj\Debug\_291Project.Customer.CustomerMovieSuggestions.resources
+F:\Tristan\Desktop\Coding\291\291Project\291Project\obj\Debug\_291Project.AddCustomer.resources
+F:\Tristan\Desktop\Coding\291\291Project\291Project\obj\Debug\_291Project.Employee.ConfirmOrder.resources
+F:\Tristan\Desktop\Coding\291\291Project\291Project\obj\Debug\_291Project.EmployeeMenu.resources
+F:\Tristan\Desktop\Coding\291\291Project\291Project\obj\Debug\_291Project.Employee.MovieSuggestions.resources
+F:\Tristan\Desktop\Coding\291\291Project\291Project\obj\Debug\_291Project.Login.resources
+F:\Tristan\Desktop\Coding\291\291Project\291Project\obj\Debug\_291Project.MailingList.resources
+F:\Tristan\Desktop\Coding\291\291Project\291Project\obj\Debug\_291Project.Manager.AddEmployee.resources
+F:\Tristan\Desktop\Coding\291\291Project\291Project\obj\Debug\_291Project.Manager.EmployeeEditPage.resources
+F:\Tristan\Desktop\Coding\291\291Project\291Project\obj\Debug\_291Project.ManagerMenu.resources
+F:\Tristan\Desktop\Coding\291\291Project\291Project\obj\Debug\_291Project.Manager.MostActiveCustomers.resources
+F:\Tristan\Desktop\Coding\291\291Project\291Project\obj\Debug\_291Project.Manager.MostActiveEmployees.resources
+F:\Tristan\Desktop\Coding\291\291Project\291Project\obj\Debug\_291Project.Manager.MovieEditPage.resources
+F:\Tristan\Desktop\Coding\291\291Project\291Project\obj\Debug\_291Project.Manager.MovieList.resources
+F:\Tristan\Desktop\Coding\291\291Project\291Project\obj\Debug\_291Project.Manager.MovieRentals.resources
+F:\Tristan\Desktop\Coding\291\291Project\291Project\obj\Debug\_291Project.Manager.SalesReport.resources
+F:\Tristan\Desktop\Coding\291\291Project\291Project\obj\Debug\_291Project.Properties.Resources.resources
+F:\Tristan\Desktop\Coding\291\291Project\291Project\obj\Debug\291Project.csproj.GenerateResource.Cache
+F:\Tristan\Desktop\Coding\291\291Project\291Project\obj\Debug\291Project.csproj.CoreCompileInputs.cache
+F:\Tristan\Desktop\Coding\291\291Project\291Project\obj\Debug\291Project.exe
+F:\Tristan\Desktop\Coding\291\291Project\291Project\obj\Debug\291Project.pdb
+F:\Tristan\Desktop\Coding\291\291Project\291Project\obj\Debug\_291Project.Customer.InfoEdit.resources
+F:\Tristan\Desktop\Coding\291\291Project\291Project\obj\Debug\_291Project.CustomerMovie.resources
+F:\Tristan\Desktop\Coding\291\291Project\291Project\obj\Debug\_291Project.Customer.RemoveQueue.resources
