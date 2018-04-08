@@ -60,28 +60,28 @@ namespace _291Project.Employee
             orderHistory.Show();
         }
         
-        private void edit_info_Click(object sender, EventArgs e)
+        private void button3_Click(object sender, EventArgs e)
         {
-            Customer.InfoEdit info = new Customer.InfoEdit();
-            info.Show();
+            Customer.RateMovie rateMovie = new Customer.RateMovie();
+            rateMovie.Show();
         }
 
-        private void view_movies_Click(object sender, EventArgs e)
+        private void view_queue_Click(object sender, EventArgs e)
+        {
+            Customer.RemoveQueue queue = new Customer.RemoveQueue();
+            queue.Show();
+        }
+
+        private void movies_Click(object sender, EventArgs e)
         {
             CustomerMovie movie = new CustomerMovie();
             movie.Show();
         }
 
-        private void queue_Click(object sender, EventArgs e)
+        private void info_Click(object sender, EventArgs e)
         {
-            Customer.RemoveQueue queue = new Customer.RemoveQueue();
-            queue.Show();
-        }
-        
-        private void button3_Click(object sender, EventArgs e)
-        {
-            Customer.RateMovie rateMovie = new Customer.RateMovie();
-            rateMovie.Show();
+            Customer.InfoEdit info = new Customer.InfoEdit();
+            info.Show();
         }
     }
 }
