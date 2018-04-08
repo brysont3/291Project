@@ -59,5 +59,11 @@ namespace _291Project.Employee
             Customer.OrderHistory orderHistory = new Customer.OrderHistory();
             orderHistory.Show();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Customer.RateMovie rateMovie = new Customer.RateMovie();
+            rateMovie.Show();
+        }
     }
 }

@@ -56,34 +56,5 @@ namespace _291Project.Employee
             this.Close();
         }
 
-        private void orderIDTextBox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void cIDTextBox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void movieIDTextBox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void cIDLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void movieIDLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void orderIDLabel_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }
