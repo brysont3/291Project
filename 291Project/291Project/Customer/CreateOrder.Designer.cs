@@ -60,6 +60,7 @@
             this.button2 = new System.Windows.Forms.Button();
             this.cIDTextBox = new System.Windows.Forms.TextBox();
             this.orderDateDateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.label1 = new System.Windows.Forms.Label();
             orderIDLabel = new System.Windows.Forms.Label();
             movieIDLabel = new System.Windows.Forms.Label();
             cIDLabel = new System.Windows.Forms.Label();
@@ -80,7 +81,6 @@
             orderIDLabel.TabIndex = 2;
             orderIDLabel.Text = "Order ID:";
             orderIDLabel.Visible = false;
-            orderIDLabel.Click += new System.EventHandler(this.orderIDLabel_Click);
             // 
             // movieIDLabel
             // 
@@ -91,7 +91,6 @@
             movieIDLabel.TabIndex = 4;
             movieIDLabel.Text = "Movie ID:";
             movieIDLabel.Visible = false;
-            movieIDLabel.Click += new System.EventHandler(this.movieIDLabel_Click);
             // 
             // cIDLabel
             // 
@@ -101,7 +100,6 @@
             cIDLabel.Size = new System.Drawing.Size(41, 20);
             cIDLabel.TabIndex = 12;
             cIDLabel.Text = "CID:";
-            cIDLabel.Click += new System.EventHandler(this.cIDLabel_Click);
             // 
             // orderDateLabel
             // 
@@ -118,9 +116,9 @@
             this.MovieBox.DataSource = this.movieBindingSource;
             this.MovieBox.DisplayMember = "MovieName";
             this.MovieBox.FormattingEnabled = true;
-            this.MovieBox.Location = new System.Drawing.Point(41, 78);
+            this.MovieBox.Location = new System.Drawing.Point(131, 78);
             this.MovieBox.Name = "MovieBox";
-            this.MovieBox.Size = new System.Drawing.Size(300, 28);
+            this.MovieBox.Size = new System.Drawing.Size(210, 28);
             this.MovieBox.TabIndex = 0;
             this.MovieBox.ValueMember = "MovieID";
             // 
@@ -296,7 +294,6 @@
             this.orderIDTextBox.Size = new System.Drawing.Size(100, 26);
             this.orderIDTextBox.TabIndex = 3;
             this.orderIDTextBox.Visible = false;
-            this.orderIDTextBox.TextChanged += new System.EventHandler(this.orderIDTextBox_TextChanged);
             // 
             // movieIDTextBox
             // 
@@ -306,7 +303,6 @@
             this.movieIDTextBox.Size = new System.Drawing.Size(100, 26);
             this.movieIDTextBox.TabIndex = 5;
             this.movieIDTextBox.Visible = false;
-            this.movieIDTextBox.TextChanged += new System.EventHandler(this.movieIDTextBox_TextChanged);
             // 
             // button1
             // 
@@ -335,7 +331,6 @@
             this.cIDTextBox.Name = "cIDTextBox";
             this.cIDTextBox.Size = new System.Drawing.Size(100, 26);
             this.cIDTextBox.TabIndex = 13;
-            this.cIDTextBox.TextChanged += new System.EventHandler(this.cIDTextBox_TextChanged);
             // 
             // orderDateDateTimePicker
             // 
@@ -345,11 +340,21 @@
             this.orderDateDateTimePicker.Size = new System.Drawing.Size(200, 26);
             this.orderDateDateTimePicker.TabIndex = 9;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(12, 81);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(100, 20);
+            this.label1.TabIndex = 14;
+            this.label1.Text = "Movie Name:";
+            // 
             // CreateOrder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(578, 341);
+            this.Controls.Add(this.label1);
             this.Controls.Add(cIDLabel);
             this.Controls.Add(this.cIDTextBox);
             this.Controls.Add(orderDateLabel);
@@ -404,5 +409,6 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.TextBox cIDTextBox;
         private System.Windows.Forms.DateTimePicker orderDateDateTimePicker;
+        private System.Windows.Forms.Label label1;
     }
 }

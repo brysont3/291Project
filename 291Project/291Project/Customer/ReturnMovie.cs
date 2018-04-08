@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace _291Project.Employee
+namespace _291Project.Customer
 {
-    public partial class ConfirmOrder : Form
+    public partial class ReturnMovie : Form
     {
-        public ConfirmOrder()
+        public ReturnMovie()
         {
             InitializeComponent();
         }
@@ -25,19 +25,29 @@ namespace _291Project.Employee
 
         }
 
-        private void ConfirmOrder_Load(object sender, EventArgs e)
+        private void ReturnMovie_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'dataSet1.Order' table. You can move, or remove it, as needed.
             this.orderTableAdapter.Fill(this.dataSet1.Order);
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void ReturnMovieButton_Click(object sender, EventArgs e)
         {
-            this.eIDTextBox.Text = Program.EmployeeID.ToString();
+            this.returnDateDateTimePicker.Value = DateTime.Today;
             this.Validate();
             this.orderBindingSource.EndEdit();
             this.tableAdapterManager.UpdateAll(this.dataSet1);
+        }
+
+        private void CancelButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void orderBindingSource_CurrentChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
