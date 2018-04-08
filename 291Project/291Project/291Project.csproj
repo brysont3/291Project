@@ -66,6 +66,12 @@
     <Compile Include="Customer\CreateOrder.Designer.cs">
       <DependentUpon>CreateOrder.cs</DependentUpon>
     </Compile>
+    <Compile Include="Customer\CurrentOrders.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customer\CurrentOrders.Designer.cs">
+      <DependentUpon>CurrentOrders.cs</DependentUpon>
+    </Compile>
     <Compile Include="Customer\CustomerMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -90,11 +96,35 @@
     <Compile Include="Customer\InfoEdit.Designer.cs">
       <DependentUpon>InfoEdit.cs</DependentUpon>
     </Compile>
+    <Compile Include="Customer\OrderHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customer\OrderHistory.Designer.cs">
+      <DependentUpon>OrderHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Customer\Payment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customer\Payment.Designer.cs">
+      <DependentUpon>Payment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Customer\RateMovie.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customer\RateMovie.Designer.cs">
+      <DependentUpon>RateMovie.cs</DependentUpon>
+    </Compile>
     <Compile Include="Customer\RemoveQueue.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Customer\RemoveQueue.Designer.cs">
       <DependentUpon>RemoveQueue.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Customer\ReturnMovie.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customer\ReturnMovie.Designer.cs">
+      <DependentUpon>ReturnMovie.cs</DependentUpon>
     </Compile>
     <Compile Include="DataSet11.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -112,6 +142,12 @@
     </Compile>
     <Compile Include="Employee\ConfirmOrder.Designer.cs">
       <DependentUpon>ConfirmOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Employee\CustomerEditPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employee\CustomerEditPage.Designer.cs">
+      <DependentUpon>CustomerEditPage.cs</DependentUpon>
     </Compile>
     <Compile Include="Employee\EmployeeMenu.cs">
       <SubType>Form</SubType>
@@ -199,6 +235,9 @@
     <EmbeddedResource Include="Customer\CreateOrder.resx">
       <DependentUpon>CreateOrder.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Customer\CurrentOrders.resx">
+      <DependentUpon>CurrentOrders.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Customer\CustomerMenu.resx">
       <DependentUpon>CustomerMenu.cs</DependentUpon>
     </EmbeddedResource>
@@ -211,14 +250,29 @@
     <EmbeddedResource Include="Customer\InfoEdit.resx">
       <DependentUpon>InfoEdit.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Customer\OrderHistory.resx">
+      <DependentUpon>OrderHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customer\Payment.resx">
+      <DependentUpon>Payment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customer\RateMovie.resx">
+      <DependentUpon>RateMovie.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Customer\RemoveQueue.resx">
       <DependentUpon>RemoveQueue.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customer\ReturnMovie.resx">
+      <DependentUpon>ReturnMovie.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Employee\AddCustomer.resx">
       <DependentUpon>AddCustomer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Employee\ConfirmOrder.resx">
       <DependentUpon>ConfirmOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employee\CustomerEditPage.resx">
+      <DependentUpon>CustomerEditPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Employee\EmployeeMenu.resx">
       <DependentUpon>EmployeeMenu.cs</DependentUpon>

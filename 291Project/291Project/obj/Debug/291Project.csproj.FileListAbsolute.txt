@@ -58,3 +58,9 @@ F:\Tristan\Desktop\Coding\291\291Project\291Project\obj\Debug\291Project.pdb
 F:\Tristan\Desktop\Coding\291\291Project\291Project\obj\Debug\_291Project.Customer.InfoEdit.resources
 F:\Tristan\Desktop\Coding\291\291Project\291Project\obj\Debug\_291Project.CustomerMovie.resources
 F:\Tristan\Desktop\Coding\291\291Project\291Project\obj\Debug\_291Project.Customer.RemoveQueue.resources
+F:\Tristan\Desktop\Coding\291\291Project\291Project\obj\Debug\_291Project.Customer.CurrentOrders.resources
+F:\Tristan\Desktop\Coding\291\291Project\291Project\obj\Debug\_291Project.Customer.OrderHistory.resources
+F:\Tristan\Desktop\Coding\291\291Project\291Project\obj\Debug\_291Project.Customer.Payment.resources
+F:\Tristan\Desktop\Coding\291\291Project\291Project\obj\Debug\_291Project.Customer.RateMovie.resources
+F:\Tristan\Desktop\Coding\291\291Project\291Project\obj\Debug\_291Project.Customer.ReturnMovie.resources
+F:\Tristan\Desktop\Coding\291\291Project\291Project\obj\Debug\_291Project.Employee.CustomerEditPage.resources
