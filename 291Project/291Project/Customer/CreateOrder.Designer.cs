@@ -81,7 +81,6 @@
             orderIDLabel.TabIndex = 2;
             orderIDLabel.Text = "Order ID:";
             orderIDLabel.Visible = false;
-            orderIDLabel.Click += new System.EventHandler(this.orderIDLabel_Click);
             // 
             // movieIDLabel
             // 
@@ -92,7 +91,6 @@
             movieIDLabel.TabIndex = 4;
             movieIDLabel.Text = "Movie ID:";
             movieIDLabel.Visible = false;
-            movieIDLabel.Click += new System.EventHandler(this.movieIDLabel_Click);
             // 
             // cIDLabel
             // 
@@ -102,7 +100,6 @@
             cIDLabel.Size = new System.Drawing.Size(41, 20);
             cIDLabel.TabIndex = 12;
             cIDLabel.Text = "CID:";
-            cIDLabel.Click += new System.EventHandler(this.cIDLabel_Click);
             // 
             // orderDateLabel
             // 
@@ -297,7 +294,6 @@
             this.orderIDTextBox.Size = new System.Drawing.Size(100, 26);
             this.orderIDTextBox.TabIndex = 3;
             this.orderIDTextBox.Visible = false;
-            this.orderIDTextBox.TextChanged += new System.EventHandler(this.orderIDTextBox_TextChanged);
             // 
             // movieIDTextBox
             // 
@@ -307,7 +303,6 @@
             this.movieIDTextBox.Size = new System.Drawing.Size(100, 26);
             this.movieIDTextBox.TabIndex = 5;
             this.movieIDTextBox.Visible = false;
-            this.movieIDTextBox.TextChanged += new System.EventHandler(this.movieIDTextBox_TextChanged);
             // 
             // button1
             // 
@@ -336,7 +331,6 @@
             this.cIDTextBox.Name = "cIDTextBox";
             this.cIDTextBox.Size = new System.Drawing.Size(100, 26);
             this.cIDTextBox.TabIndex = 13;
-            this.cIDTextBox.TextChanged += new System.EventHandler(this.cIDTextBox_TextChanged);
             // 
             // orderDateDateTimePicker
             // 
