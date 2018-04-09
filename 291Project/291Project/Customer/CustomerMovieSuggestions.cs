@@ -35,5 +35,6 @@ namespace _291Project.Customer
             MovieSuggestionGridView.DataSource = dt;
             con.Close();
         }
+
     }
 }
