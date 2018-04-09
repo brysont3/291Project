@@ -48,21 +48,21 @@
             // 
             // CreateOrder
             // 
-            this.CreateOrder.Location = new System.Drawing.Point(49, 28);
-            this.CreateOrder.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.CreateOrder.Location = new System.Drawing.Point(74, 40);
+            this.CreateOrder.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.CreateOrder.Name = "CreateOrder";
-            this.CreateOrder.Size = new System.Drawing.Size(100, 32);
+            this.CreateOrder.Size = new System.Drawing.Size(150, 75);
             this.CreateOrder.TabIndex = 0;
-            this.CreateOrder.Text = "Create an order";
+            this.CreateOrder.Text = "Create an Order";
             this.CreateOrder.UseVisualStyleBackColor = true;
             this.CreateOrder.Click += new System.EventHandler(this.CreateOrder_Click);
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(342, 342);
-            this.button2.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.button2.Location = new System.Drawing.Point(513, 526);
+            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(100, 31);
+            this.button2.Size = new System.Drawing.Size(150, 48);
             this.button2.TabIndex = 1;
             this.button2.Text = "Logout";
             this.button2.UseVisualStyleBackColor = true;
@@ -70,10 +70,9 @@
             // 
             // MovieSuggestionButton
             // 
-            this.MovieSuggestionButton.Location = new System.Drawing.Point(207, 28);
-            this.MovieSuggestionButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.MovieSuggestionButton.Location = new System.Drawing.Point(310, 43);
             this.MovieSuggestionButton.Name = "MovieSuggestionButton";
-            this.MovieSuggestionButton.Size = new System.Drawing.Size(100, 47);
+            this.MovieSuggestionButton.Size = new System.Drawing.Size(150, 72);
             this.MovieSuggestionButton.TabIndex = 2;
             this.MovieSuggestionButton.Text = "Movie Suggestions";
             this.MovieSuggestionButton.UseVisualStyleBackColor = true;
@@ -102,10 +101,9 @@
             // 
             // ReturnOrder
             // 
-            this.ReturnOrder.Location = new System.Drawing.Point(49, 94);
-            this.ReturnOrder.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ReturnOrder.Location = new System.Drawing.Point(74, 136);
             this.ReturnOrder.Name = "ReturnOrder";
-            this.ReturnOrder.Size = new System.Drawing.Size(100, 49);
+            this.ReturnOrder.Size = new System.Drawing.Size(150, 75);
             this.ReturnOrder.TabIndex = 3;
             this.ReturnOrder.Text = "Return an Order";
             this.ReturnOrder.UseVisualStyleBackColor = true;
@@ -113,10 +111,9 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(207, 94);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Location = new System.Drawing.Point(310, 136);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(100, 49);
+            this.button1.Size = new System.Drawing.Size(150, 75);
             this.button1.TabIndex = 4;
             this.button1.Text = "View Your Current Orders";
             this.button1.UseVisualStyleBackColor = true;
@@ -124,9 +121,10 @@
             // 
             // PaymentButton
             // 
-            this.PaymentButton.Location = new System.Drawing.Point(207, 152);
+            this.PaymentButton.Location = new System.Drawing.Point(310, 234);
+            this.PaymentButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.PaymentButton.Name = "PaymentButton";
-            this.PaymentButton.Size = new System.Drawing.Size(100, 46);
+            this.PaymentButton.Size = new System.Drawing.Size(150, 71);
             this.PaymentButton.TabIndex = 5;
             this.PaymentButton.Text = "Make A Payment";
             this.PaymentButton.UseVisualStyleBackColor = true;
@@ -134,9 +132,10 @@
             // 
             // OrderHistoryButton
             // 
-            this.OrderHistoryButton.Location = new System.Drawing.Point(49, 180);
+            this.OrderHistoryButton.Location = new System.Drawing.Point(74, 234);
+            this.OrderHistoryButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.OrderHistoryButton.Name = "OrderHistoryButton";
-            this.OrderHistoryButton.Size = new System.Drawing.Size(100, 46);
+            this.OrderHistoryButton.Size = new System.Drawing.Size(150, 75);
             this.OrderHistoryButton.TabIndex = 6;
             this.OrderHistoryButton.Text = "Order History";
             this.OrderHistoryButton.UseVisualStyleBackColor = true;
@@ -155,9 +154,10 @@
             // 
             // view_queue
             // 
-            this.view_queue.Location = new System.Drawing.Point(207, 296);
+            this.view_queue.Location = new System.Drawing.Point(310, 455);
+            this.view_queue.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.view_queue.Name = "view_queue";
-            this.view_queue.Size = new System.Drawing.Size(100, 46);
+            this.view_queue.Size = new System.Drawing.Size(150, 71);
             this.view_queue.TabIndex = 7;
             this.view_queue.Text = "View Queue";
             this.view_queue.UseVisualStyleBackColor = true;
@@ -165,9 +165,10 @@
             // 
             // info
             // 
-            this.info.Location = new System.Drawing.Point(49, 239);
+            this.info.Location = new System.Drawing.Point(74, 345);
+            this.info.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.info.Name = "info";
-            this.info.Size = new System.Drawing.Size(100, 46);
+            this.info.Size = new System.Drawing.Size(150, 71);
             this.info.TabIndex = 8;
             this.info.Text = "Edit Info";
             this.info.UseVisualStyleBackColor = true;
@@ -175,9 +176,10 @@
             // 
             // movies
             // 
-            this.movies.Location = new System.Drawing.Point(207, 224);
+            this.movies.Location = new System.Drawing.Point(310, 345);
+            this.movies.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.movies.Name = "movies";
-            this.movies.Size = new System.Drawing.Size(100, 46);
+            this.movies.Size = new System.Drawing.Size(150, 71);
             this.movies.TabIndex = 9;
             this.movies.Text = "View Movies";
             this.movies.UseVisualStyleBackColor = true;
@@ -197,18 +199,18 @@
             "Make a Payment",
             "View Movies",
             "View Queue"});
-            this.comboBox1.Location = new System.Drawing.Point(324, 28);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBox1.Location = new System.Drawing.Point(486, 43);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(145, 21);
+            this.comboBox1.Size = new System.Drawing.Size(216, 28);
             this.comboBox1.TabIndex = 10;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // RateMovieButton
             // 
-            this.RateMovieButton.Location = new System.Drawing.Point(49, 305);
+            this.RateMovieButton.Location = new System.Drawing.Point(74, 455);
+            this.RateMovieButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.RateMovieButton.Name = "RateMovieButton";
-            this.RateMovieButton.Size = new System.Drawing.Size(100, 46);
+            this.RateMovieButton.Size = new System.Drawing.Size(150, 71);
             this.RateMovieButton.TabIndex = 10;
             this.RateMovieButton.Text = "Rate a Movie";
             this.RateMovieButton.UseVisualStyleBackColor = true;
@@ -216,9 +218,9 @@
             // 
             // CustomerMenu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(480, 383);
+            this.ClientSize = new System.Drawing.Size(720, 589);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.RateMovieButton);
             this.Controls.Add(this.movies);
@@ -231,7 +233,6 @@
             this.Controls.Add(this.MovieSuggestionButton);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.CreateOrder);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "CustomerMenu";
             this.Text = "CustomerMenu";
             this.ResumeLayout(false);
