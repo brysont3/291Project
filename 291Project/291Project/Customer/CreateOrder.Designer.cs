@@ -61,6 +61,7 @@
             this.cIDTextBox = new System.Windows.Forms.TextBox();
             this.orderDateDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             orderIDLabel = new System.Windows.Forms.Label();
             movieIDLabel = new System.Windows.Forms.Label();
             cIDLabel = new System.Windows.Forms.Label();
@@ -70,6 +71,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.movieBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.orderBindingNavigator)).BeginInit();
             this.orderBindingNavigator.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // orderIDLabel
@@ -188,7 +190,7 @@
             this.orderBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.orderBindingNavigator.Name = "orderBindingNavigator";
             this.orderBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.orderBindingNavigator.Size = new System.Drawing.Size(578, 31);
+            this.orderBindingNavigator.Size = new System.Drawing.Size(864, 31);
             this.orderBindingNavigator.TabIndex = 1;
             this.orderBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -349,11 +351,21 @@
             this.label1.TabIndex = 14;
             this.label1.Text = "Movie Name:";
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(335, 248);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowTemplate.Height = 28;
+            this.dataGridView1.Size = new System.Drawing.Size(499, 277);
+            this.dataGridView1.TabIndex = 15;
+            // 
             // CreateOrder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(578, 341);
+            this.ClientSize = new System.Drawing.Size(864, 549);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label1);
             this.Controls.Add(cIDLabel);
             this.Controls.Add(this.cIDTextBox);
@@ -376,6 +388,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.orderBindingNavigator)).EndInit();
             this.orderBindingNavigator.ResumeLayout(false);
             this.orderBindingNavigator.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -410,5 +423,6 @@
         private System.Windows.Forms.TextBox cIDTextBox;
         private System.Windows.Forms.DateTimePicker orderDateDateTimePicker;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }
