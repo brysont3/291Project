@@ -51,10 +51,13 @@ namespace _291Project.Employee
             {
                 dr.Read();
                 atOnce = dr.GetInt32(1);
-                outCnt = dr.GetInt32(2);
+                    if (dr["OutCnt"] == DBNull.Value)
+                        outCnt = 0;
+                else
+                    outCnt = dr.GetInt32(2);
             }
             oCnn.Close();
-            MessageBox.Show("atONCE" + atOnce.ToString() + " " + "OUTCNT" + outCnt.ToString());
+            //MessageBox.Show("atONCE" + atOnce.ToString() + " " + "OUTCNT" + outCnt.ToString());
 
             if(outCnt >= atOnce)
             {
