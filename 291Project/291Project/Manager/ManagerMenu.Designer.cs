@@ -38,6 +38,7 @@
             this.NewCustomerButton = new System.Windows.Forms.Button();
             this.NewEmployeeButton = new System.Windows.Forms.Button();
             this.MovieButton = new System.Windows.Forms.Button();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // LogoutButton
@@ -140,11 +141,32 @@
             this.MovieButton.UseVisualStyleBackColor = true;
             this.MovieButton.Click += new System.EventHandler(this.MovieButton_Click);
             // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Help",
+            "Movies",
+            "Employees",
+            "Sales Report",
+            "Movie Rentals",
+            "Edit Movies",
+            "Most Active Customers",
+            "Most Active Employees",
+            "New Customer",
+            "New Employee"});
+            this.comboBox1.Location = new System.Drawing.Point(455, 59);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.TabIndex = 10;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
             // ManagerMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(588, 535);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.MovieButton);
             this.Controls.Add(this.NewEmployeeButton);
             this.Controls.Add(this.NewCustomerButton);
@@ -173,5 +195,6 @@
         private System.Windows.Forms.Button NewCustomerButton;
         private System.Windows.Forms.Button NewEmployeeButton;
         private System.Windows.Forms.Button MovieButton;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }

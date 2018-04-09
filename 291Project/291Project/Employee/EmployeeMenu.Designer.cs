@@ -36,6 +36,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.MovieSuggestionButton = new System.Windows.Forms.Button();
             this.mail_list = new System.Windows.Forms.Button();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -116,11 +117,27 @@
             this.mail_list.UseVisualStyleBackColor = true;
             this.mail_list.Click += new System.EventHandler(this.mail_list_Click);
             // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Help",
+            "New Customer",
+            "New Orders",
+            "Movie Suggestions",
+            "Customer Mailing List"});
+            this.comboBox1.Location = new System.Drawing.Point(455, 61);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.TabIndex = 6;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
             // EmployeeMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(683, 501);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.mail_list);
             this.Controls.Add(this.MovieSuggestionButton);
             this.Controls.Add(this.button1);
@@ -147,5 +164,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button MovieSuggestionButton;
         private System.Windows.Forms.Button mail_list;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }

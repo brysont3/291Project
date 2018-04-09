@@ -54,11 +54,8 @@ namespace _291Project
                     ConnectionString = str
                 };
                 con.Open();
-                SqlCommand cmd = new SqlCommand("DECLARE @num int " +
-                        "SET @num = (select max(QueueNumber) as max " +
-                        "from RentQueue where CID = @user) + 1 " +
-                        "insert RentQueue(CID, MovieID, QueueNumber) " +
-                        "values(@user, @MovieID, @num)", con);
+                SqlCommand cmd = new SqlCommand("declare @num int SET @num = (select max(QueueNumber) as max from RentQueue where CID = @user) + 1 " +
+                        "insert RentQueue(CID, MovieID, QueueNumber) select @user, @MovieID, case when @num is null then 1 else @num end as max_queue", con);
                 cmd.Parameters.AddWithValue("@user", Program.CustomerID.ToString());
                 cmd.Parameters.AddWithValue("@MovieID", movieDataGridView.Rows[e.RowIndex].Cells[0].Value);
 
