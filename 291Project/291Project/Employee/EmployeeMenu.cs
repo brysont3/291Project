@@ -15,6 +15,7 @@ namespace _291Project
         public EmployeeMenu()
         {
             InitializeComponent();
+            comboBox1.SelectedIndex = 0;
         }
 
         private void customerToolStripMenuItem_Click(object sender, EventArgs e)
@@ -52,6 +53,33 @@ namespace _291Project
         {
             MailingList list = new MailingList();
             list.Show();
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(comboBox1.Text))
+            {
+                string selected = this.comboBox1.GetItemText(this.comboBox1.SelectedItem);
+                switch (selected)
+                {
+                    case "New Customer":
+                        MessageBox.Show("New Customer allows an employee to easily add a new customer to the system.");
+                        break;
+
+                    case "New Orders":
+                        MessageBox.Show("New Orders allows an employee to confirm a customer request for a movie.");
+                        break;
+
+                    case "Movie Suggestions":
+                        MessageBox.Show("Movie Sugesstions allows an employee to genrate a personalized movie list based on a specific customers recomendations.");
+                        break;
+
+                    case "Customer Mailing List":
+                        MessageBox.Show("Customer Mailing List provides employees with a list of all relevant mailing information for all customers.");
+                        break;
+
+                }
+            }
         }
     }
 }

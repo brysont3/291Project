@@ -42,6 +42,7 @@
             this.view_queue = new System.Windows.Forms.Button();
             this.info = new System.Windows.Forms.Button();
             this.movies = new System.Windows.Forms.Button();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // CreateOrder
@@ -181,11 +182,32 @@
             this.movies.UseVisualStyleBackColor = true;
             this.movies.Click += new System.EventHandler(this.movies_Click);
             // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Help",
+            "Create an Order",
+            "Return an Order",
+            "Order History",
+            "Edit Info",
+            "Movie Suggetions",
+            "View Your Current Orders ",
+            "Make a Payment",
+            "View Movies",
+            "View Queue"});
+            this.comboBox1.Location = new System.Drawing.Point(328, 28);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.TabIndex = 10;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
             // CustomerMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(461, 383);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.movies);
             this.Controls.Add(this.info);
             this.Controls.Add(this.view_queue);
@@ -219,5 +241,6 @@
         private System.Windows.Forms.Button view_queue;
         private System.Windows.Forms.Button info;
         private System.Windows.Forms.Button movies;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }
