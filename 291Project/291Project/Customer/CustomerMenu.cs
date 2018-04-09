@@ -131,6 +131,7 @@ namespace _291Project.Employee
 
                 }
             }
+        }
         private void RateMovieButton_Click(object sender, EventArgs e)
         {
             Customer.RateMovie rateMovie = new Customer.RateMovie();
