@@ -47,7 +47,7 @@ namespace _291Project.Customer
                 System.Data.SqlClient.SqlCommand oCmd = new System.Data.SqlClient.SqlCommand(strSQL, oDA);
 
                 Int32 cnt = oCmd.ExecuteNonQuery();
-                MessageBox.Show("Movie Rated");
+                MessageBox.Show("Movie Successfully Rated");
             }
             catch (System.Data.SqlClient.SqlException ex)
             {
